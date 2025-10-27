@@ -193,3 +193,19 @@ body {
 
 /* Si prefieres ponerlo a la izquierda siempre, usa esto en vez del 'right' */
 /* #whatsapp-fab{ right: auto; left: 24px; bottom: 24px; } */
+/* ===== Navbar fija y sin saltos ===== */
+.navbar.fixed-top{           /* refuerza el fixed */
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1100;             /* por encima del contenido */
+}
+
+.navbar-ribbon{
+  backdrop-filter: saturate(120%) blur(6px); /* look pro, opcional */
+  -webkit-backdrop-filter: saturate(120%) blur(6px);
+}
+
+/* Altura reservada debajo de la navbar para evitar que la tape */
+body{
+  padding-top: 110px;        /* ajusta a la altura real de tu barra (logo ~96px) */
+}
