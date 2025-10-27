@@ -16,7 +16,7 @@
     gtag('config', 'G-XXXXXXXXXX'); // ← pon aquí tu ID de GA4
   </script>
 
-  <!-- Estilos -->
+  <!-- Estilos Bootstrap -->
   <link
     crossorigin="anonymous"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -24,6 +24,13 @@
     rel="stylesheet"
   />
   <link href="style.css" rel="stylesheet" />
+
+  <!-- Choices.js (selector múltiple elegante) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <style>
+    /* Asegurar ancho completo del componente */
+    .choices { width: 100%; }
+  </style>
 
   <!-- SEO -->
   <title>Grupo Berlap | Servicios de Inspección y Pruebas No Destructivas (NDT)</title>
@@ -221,42 +228,19 @@
                 <input class="form-control" id="email" name="correo" type="email" required />
               </div>
 
+              <!-- ✅ Selector múltiple elegante con Choices.js -->
               <div class="mb-3">
-              <label class="form-label">Servicios requeridos</label>
-
-              <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="srv-ut" name="servicios" value="Ultrasonido (UT)">
-              <label class="form-check-label" for="srv-ut">Ultrasonido (UT)</label>
+                <label class="form-label" for="service-type">Servicios requeridos</label>
+                <select class="form-select" id="service-type" name="servicios" multiple>
+                  <option value="Ultrasonido (UT)">Ultrasonido (UT)</option>
+                  <option value="Líquidos Penetrantes (LP)">Líquidos Penetrantes (LP)</option>
+                  <option value="Inspección Visual (VT)">Inspección Visual (VT)</option>
+                  <option value="Partículas Magnéticas (MT)">Partículas Magnéticas (MT)</option>
+                  <option value="Medición de Espesores (UTT)">Medición de Espesores (UTT)</option>
+                  <option value="Radiografía Industrial (RT)">Radiografía Industrial (RT)</option>
+                </select>
+                <small class="text-muted d-block mt-1">Selecciona uno o varios servicios.</small>
               </div>
-
-              <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="srv-lp" name="servicios" value="Líquidos Penetrantes (LP)">
-              <label class="form-check-label" for="srv-lp">Líquidos Penetrantes (LP)</label>
-              </div>
-
-              <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="srv-vt" name="servicios" value="Inspección Visual (VT)">
-              <label class="form-check-label" for="srv-vt">Inspección Visual (VT)</label>
-              </div>
-
-              <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="srv-mt" name="servicios" value="Partículas Magnéticas (MT)">
-              <label class="form-check-label" for="srv-mt">Partículas Magnéticas (MT)</label>
-              </div>
-
-              <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="srv-utt" name="servicios" value="Medición de Espesores (UTT)">
-              <label class="form-check-label" for="srv-utt">Medición de Espesores (UTT)</label>
-              </div>
-
-              <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="srv-rt" name="servicios" value="Radiografía Industrial (RT)">
-              <label class="form-check-label" for="srv-rt">Radiografía Industrial (RT)</label>
-              </div>
-
-              <small class="text-muted d-block mt-1">Puedes seleccionar uno o varios.</small>
-              </div>
-
 
               <div class="mb-3">
                 <label class="form-label" for="message">Mensaje</label>
@@ -297,9 +281,25 @@
   <!-- Tu JS (si tienes) -->
   <script src="script.js"></script>
 
-  <!-- Animación de aparición para .service-row -->
+  <!-- Choices.js -->
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+    // Inicializar el selector múltiple
+    document.addEventListener('DOMContentLoaded', function () {
+      const serviceSelect = document.getElementById('service-type');
+      if (serviceSelect) {
+        new Choices(serviceSelect, {
+          removeItemButton: true,
+          searchEnabled: false,
+          placeholderValue: 'Selecciona uno o varios servicios',
+          noResultsText: 'No hay coincidencias',
+          itemSelectText: 'Seleccionar',
+          shouldSort: false,
+          position: 'bottom',
+        });
+      }
+
+      // Animación de aparición para .service-row
       const rows = document.querySelectorAll(".service-row");
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
