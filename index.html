@@ -4,349 +4,253 @@
   <meta charset="UTF-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <!-- ✅ Verificación de Google Search Console -->
   <meta name="google-site-verification" content="ijizw-gbOl4cp1Z701OX_wAsiQLy-MQ53U2gtYjHdE" />
 
-  <!-- ✅ Google Analytics 4 (reemplaza G-XXXXXXXXXX por tu ID real) -->
+  <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX'); // ← pon aquí tu ID de GA4
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
 
-  <!-- Estilos Bootstrap -->
-  <link
-    crossorigin="anonymous"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    rel="stylesheet"
-  />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Tu CSS -->
   <link href="style.css" rel="stylesheet" />
 
-  <!-- Choices.js (selector múltiple elegante) -->
+  <!-- Choices.js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
-  <style>
-    .choices { width: 100%; }
-  </style>
+  <style>.choices{width:100%;}</style>
 
-  <!-- SEO -->
   <title>Grupo Berlap | Servicios de Inspección y Pruebas No Destructivas (NDT)</title>
   <meta name="description" content="Somos especialistas en ensayos no destructivos, inspección industrial y control de calidad para la industria metalmecánica.">
-  <meta name="keywords" content="ensayos no destructivos, NDT, inspección industrial, control de calidad, metalmecánica, grupo berlap, líquidos penetrantes, ultrasonido industrial, partículas magnéticas">
   <link rel="canonical" href="https://www.grupoberlap.com/">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Grupo Berlap | Servicios de Inspección y Pruebas No Destructivas (NDT)" />
   <meta property="og:description" content="Somos especialistas en ensayos no destructivos, inspección industrial y control de calidad para la industria metalmecánica." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.grupoberlap.com/" />
   <meta property="og:image" content="https://www.grupoberlap.com/hero-image.png" />
-
-  <!-- Twitter Card (opcional) -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Grupo Berlap | Ensayos No Destructivos (NDT)">
-  <meta name="twitter:description" content="Inspección industrial y control de calidad.">
-  <meta name="twitter:image" content="https://www.grupoberlap.com/hero-image.png">
 </head>
-
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light navbar-ribbon fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img alt="BERLAP Logo" src="/ChatGPT Image 21 sept 2025, 23_42_22.png" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section id="home" class="hero-section text-white text-center d-flex align-items-center">
-      <div class="container">
-        <h1 class="display-4 fw-bold">Servicios Profesionales de Inspección y Ensayos No Destructivos (END)</h1>
-        <p class="lead">Garantizamos la seguridad, calidad y cumplimiento técnico de tus proyectos industriales. Más de
-          10 años asegurando resultados trazables y confiables.</p>
-        <div class="mt-3">
-          <a class="btn btn-primary btn-lg me-2" href="#contact">Solicitar cotización</a>
-          <a class="btn btn-outline-light btn-lg" href="#contact">Hablar con un especialista</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======== Servicios (nuevo diseño mitad imagen / mitad texto) ======== -->
-    <section id="services" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-4">Nuestros Servicios en Pruebas No Destructivas</h2>
-        <p class="text-center mb-5">
-          En <strong>GRUPO BERLAP</strong> ofrecemos soluciones integrales en inspección y control de calidad industrial.
-          Técnicos certificados bajo ISO 9712 y SNT-TC-1A.
-        </p>
-
-        <!-- UT -->
-        <div class="service-row">
-          <div class="service-image">
-            <img src="ULTRASONIDO W.jpg" alt="Ultrasonido (UT)">
-          </div>
-          <div class="service-info">
-            <h3>Ultrasonido (UT)</h3>
-            <p>
-              Evaluación interna de materiales mediante ondas ultrasónicas para detectar discontinuidades, grietas o defectos sin dañar el componente.
-            </p>
-            <a href="#contact" class="btn btn-primary btn-sm">Solicitar cotización</a>
-          </div>
-        </div>
-
-        <!-- LP -->
-        <div class="service-row reverse">
-          <div class="service-image">
-            <img src="servicios10.jpg" alt="Líquidos Penetrantes (LP)">
-          </div>
-          <div class="service-info">
-            <h3>Líquidos Penetrantes (LP)</h3>
-            <p>
-              Detección de fallas superficiales en materiales no porosos mediante tintes visibles o fluorescentes.
-            </p>
-            <a href="#contact" class="btn btn-outline-primary btn-sm">Hablar con un especialista</a>
-          </div>
-        </div>
-
-        <!-- VT -->
-        <div class="service-row">
-          <div class="service-image">
-            <img src="Inspeccion-visual-de-soldadura.webp" alt="Inspección Visual (VT)">
-          </div>
-          <div class="service-info">
-            <h3>Inspección Visual (VT)</h3>
-            <p>
-              Examen detallado de superficies y estructuras con herramientas especializadas, garantizando la detección temprana de defectos visibles.
-            </p>
-            <a href="#contact" class="btn btn-primary btn-sm">Solicitar cotización</a>
-          </div>
-        </div>
-
-        <!-- MT -->
-        <div class="service-row reverse">
-          <div class="service-image">
-            <img src="PARTICULAS MAGNETICAS.jpg" alt="Partículas Magnéticas (MT)">
-          </div>
-          <div class="service-info">
-            <h3>Partículas Magnéticas (MT)</h3>
-            <p>
-              Identificación de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos con campos magnéticos y partículas visibles.
-            </p>
-            <a href="#contact" class="btn btn-outline-primary btn-sm">Hablar con un especialista</a>
-          </div>
-        </div>
-
-        <!-- UTT -->
-        <div class="service-row">
-          <div class="service-image">
-            <img src="istockphoto-1250672522-612x612.jpg" alt="Medición de Espesores (UTT)">
-          </div>
-          <div class="service-info">
-            <h3>Medición de Espesores (UTT)</h3>
-            <p>
-              Determinación precisa del espesor mediante ultrasonido; ideal para evaluar la corrosión y el desgaste sin desmontar equipos.
-            </p>
-            <a href="#contact" class="btn btn-primary btn-sm">Solicitar cotización</a>
-          </div>
-        </div>
-
-        <!-- RT -->
-        <div class="service-row reverse">
-          <div class="service-image">
-            <img src="servicios1-1.jpg" alt="Radiografía Industrial (RT)">
-          </div>
-          <div class="service-info">
-            <h3>Radiografía Industrial (RT)</h3>
-            <p>
-              Inspección por radiografía para detectar discontinuidades internas en soldaduras, piezas fundidas o componentes estructurales, utilizando imágenes de alta resolución.
-            </p>
-            <a href="#contact" class="btn btn-outline-primary btn-sm">Hablar con un especialista</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ======== /Servicios ======== -->
-
-    <!-- Sobre nosotros -->
-    <section id="about" class="bg-light py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-4 mb-md-0">
-            <img src="about-us-image.png" alt="Equipo de inspectores trabajando" class="img-fluid rounded shadow" />
-          </div>
-          <div class="col-md-6">
-            <h2>Sobre Nosotros</h2>
-            <p>Somos un equipo de inspectores certificados con más de 15 años de experiencia en la industria. Nuestra
-              misión es proporcionar informes claros, precisos y fiables que ayuden a nuestros clientes a tomar
-              decisiones informadas. La confianza y la rigurosidad son los pilares de nuestro trabajo.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contacto / Netlify Forms -->
-    <section id="contact" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-3">Contáctanos</h2>
-        <p class="text-center mb-4">¿Necesitas asegurar la calidad de tus soldaduras o estructuras? Confía en los
-          expertos.</p>
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <form
-              id="contact-form"
-              name="contacto"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              action="/gracias.html"
-              accept-charset="UTF-8">
-
-              <!-- Tiene que ir como primer hijo -->
-              <input type="hidden" name="form-name" value="contacto" />
-
-              <!-- Honeypot (oculto) -->
-              <p style="display:none;">
-                <label>No llenar si eres humano: <input name="bot-field" /></label>
-              </p>
-
-              <div class="mb-3">
-                <label class="form-label" for="name">Nombre</label>
-                <input class="form-control" id="name" name="nombre" type="text" required />
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label" for="email">Correo Electrónico</label>
-                <input class="form-control" id="email" name="correo" type="email" required />
-              </div>
-
-              <!-- Selector múltiple -->
-              <div class="mb-3">
-                <label class="form-label" for="service-type">Servicios requeridos</label>
-                <select class="form-select" id="service-type" name="servicios[]" multiple>
-                  <option value="Ultrasonido (UT)">Ultrasonido (UT)</option>
-                  <option value="Líquidos Penetrantes (LP)">Líquidos Penetrantes (LP)</option>
-                  <option value="Inspección Visual (VT)">Inspección Visual (VT)</option>
-                  <option value="Partículas Magnéticas (MT)">Partículas Magnéticas (MT)</option>
-                  <option value="Medición de Espesores (UTT)">Medición de Espesores (UTT)</option>
-                  <option value="Radiografía Industrial (RT)">Radiografía Industrial (RT)</option>
-                </select>
-                <small class="text-muted d-block mt-1">Selecciona uno o varios.</small>
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label" for="message">Mensaje</label>
-                <textarea class="form-control" id="message" name="mensaje" rows="4" required></textarea>
-              </div>
-
-              <button class="btn btn-primary w-100" type="submit">Enviar Mensaje</button>
-              <div id="form-status" class="small text-muted mt-2"></div>
-            </form>
-
-            <div class="mt-3 text-center">
-              <p class="mb-1">📞 Tel: (+52) 55 0000 0000</p>
-              <p class="mb-1">✉️ Email: <a href="mailto:ventas@grupoberlap.com">ventas@grupoberlap.com</a></p>
-              <p class="mb-0">📍 Monterrey N.L. / Cobertura Nacional</p>
-              <a class="btn btn-success btn-sm mt-3" href="https://wa.me/525500000000" target="_blank" rel="noopener">Enviar WhatsApp</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-dark text-white text-center py-3">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light navbar-ribbon fixed-top">
     <div class="container">
-      <p>© 2024 GRUPO BERLAP. Todos los derechos reservados.</p>
+      <a class="navbar-brand" href="#">
+        <img alt="BERLAP Logo" src="ChatGPT Image 21 sept 2025, 23_42_22.png" height="60"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+        </ul>
+      </div>
     </div>
-  </footer>
+  </nav>
+</header>
 
-  <!-- Scripts Bootstrap -->
-  <script
-    crossorigin="anonymous"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  ></script>
+<main>
+  <!-- Hero -->
+  <section id="home" class="hero-section text-white text-center d-flex align-items-center"
+           style="min-height: 60vh; background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('hero-image.png') center/cover no-repeat;">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Servicios Profesionales de Inspección y Ensayos No Destructivos (END)</h1>
+      <p class="lead">Garantizamos la seguridad, calidad y cumplimiento técnico de tus proyectos industriales.</p>
+      <div class="mt-3">
+        <a class="btn btn-primary btn-lg me-2" href="#contact">Solicitar cotización</a>
+        <a class="btn btn-outline-light btn-lg" href="#contact">Hablar con un especialista</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- Choices.js -->
-  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <!-- Servicios -->
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Nuestros Servicios en Pruebas No Destructivas</h2>
+      <p class="text-center mb-5">En <strong>GRUPO BERLAP</strong> ofrecemos soluciones integrales en inspección y control de calidad industrial.</p>
 
-  <!-- Envío seguro y UI -->
-  <script>
-    // Inicializar el selector múltiple
-    document.addEventListener('DOMContentLoaded', function () {
-      const serviceSelect = document.getElementById('service-type');
-      if (serviceSelect) {
-        new Choices(serviceSelect, {
-          removeItemButton: true,
-          searchEnabled: false,
-          placeholderValue: 'Selecciona uno o varios servicios',
-          noResultsText: 'No hay coincidencias',
-          itemSelectText: 'Seleccionar',
-          shouldSort: false,
-          position: 'bottom',
+      <div class="service-row">
+        <div class="service-image"><img src="ULTRASONIDO W.jpg" alt="Ultrasonido (UT)"></div>
+        <div class="service-info">
+          <h3>Ultrasonido (UT)</h3>
+          <p>Evaluación interna de materiales mediante ondas ultrasónicas.</p>
+        </div>
+      </div>
+
+      <div class="service-row reverse">
+        <div class="service-image"><img src="LIQUIDOS PENETRANTES W.png" alt="Líquidos Penetrantes (LP)"></div>
+        <div class="service-info">
+          <h3>Líquidos Penetrantes (LP)</h3>
+          <p>Detección de fallas superficiales con tintes visibles o fluorescentes.</p>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-image"><img src="Inspeccion-visual-de-soldadura.webp" alt="Inspección Visual (VT)"></div>
+        <div class="service-info">
+          <h3>Inspección Visual (VT)</h3>
+          <p>Examen de superficies y estructuras con herramientas especializadas.</p>
+        </div>
+      </div>
+
+      <div class="service-row reverse">
+        <div class="service-image"><img src="PARTICULAS MAGNETICAS.jpg" alt="Partículas Magnéticas (MT)"></div>
+        <div class="service-info">
+          <h3>Partículas Magnéticas (MT)</h3>
+          <p>Identificación de discontinuidades en materiales ferromagnéticos.</p>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-image"><img src="istockphoto-1250672522-612x612.jpg" alt="Medición de Espesores (UTT)"></div>
+        <div class="service-info">
+          <h3>Medición de Espesores (UTT)</h3>
+          <p>Determinación precisa del espesor por ultrasonido.</p>
+        </div>
+      </div>
+
+      <div class="service-row reverse">
+        <div class="service-image"><img src="servicios1-1.jpg" alt="Radiografía Industrial (RT)"></div>
+        <div class="service-info">
+          <h3>Radiografía Industrial (RT)</h3>
+          <p>Detección de discontinuidades internas con imágenes de alta resolución.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre nosotros -->
+  <section id="about" class="bg-light py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="about-us-image.png" alt="Equipo de inspectores" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-md-6">
+          <h2>Sobre Nosotros</h2>
+          <p>Somos un equipo de inspectores certificados con más de 15 años de experiencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-3">Contáctanos</h2>
+      <p class="text-center mb-4">Confía en los expertos.</p>
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <form id="contact-form" name="contacto" method="POST" data-netlify="true"
+                netlify-honeypot="bot-field" action="/gracias.html" accept-charset="UTF-8">
+            <input type="hidden" name="form-name" value="contacto" />
+            <p style="display:none;"><label>No llenar si eres humano: <input name="bot-field" /></label></p>
+
+            <div class="mb-3">
+              <label class="form-label" for="name">Nombre</label>
+              <input class="form-control" id="name" name="nombre" type="text" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="email">Correo Electrónico</label>
+              <input class="form-control" id="email" name="correo" type="email" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="service-type">Servicios requeridos</label>
+              <select class="form-select" id="service-type" name="servicios[]" multiple>
+                <option value="Ultrasonido (UT)">Ultrasonido (UT)</option>
+                <option value="Líquidos Penetrantes (LP)">Líquidos Penetrantes (LP)</option>
+                <option value="Inspección Visual (VT)">Inspección Visual (VT)</option>
+                <option value="Partículas Magnéticas (MT)">Partículas Magnéticas (MT)</option>
+                <option value="Medición de Espesores (UTT)">Medición de Espesores (UTT)</option>
+                <option value="Radiografía Industrial (RT)">Radiografía Industrial (RT)</option>
+              </select>
+              <small class="text-muted d-block mt-1">Selecciona uno o varios.</small>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="message">Mensaje</label>
+              <textarea class="form-control" id="message" name="mensaje" rows="4" required></textarea>
+            </div>
+
+            <button class="btn btn-primary w-100" type="submit">Enviar Mensaje</button>
+            <div id="form-status" class="small text-muted mt-2"></div>
+          </form>
+
+          <div class="mt-3 text-center">
+            <p class="mb-1">📞 Tel: (+52) 55 0000 0000</p>
+            <p class="mb-1">✉️ Email: <a href="mailto:ventas@grupoberlap.com">ventas@grupoberlap.com</a></p>
+            <p class="mb-0">📍 Monterrey N.L. / Cobertura Nacional</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+    <p>© 2024 GRUPO BERLAP. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const serviceSelect = document.getElementById('service-type');
+    if (serviceSelect) {
+      new Choices(serviceSelect, {
+        removeItemButton: true,
+        searchEnabled: false,
+        shouldSort: false,
+        position: 'bottom',
+      });
+    }
+  });
+
+  (function () {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    const statusEl = document.getElementById('form-status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      try {
+        if (statusEl) statusEl.textContent = 'Enviando…';
+        const data = new FormData(form);
+        if (!data.get('form-name')) data.set('form-name', 'contacto');
+        const resp = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString()
         });
+        if (resp.ok) {
+          if (statusEl) statusEl.textContent = 'Enviado, redirigiendo…';
+          window.location.href = form.getAttribute('action') || '/gracias.html';
+        } else {
+          if (statusEl) statusEl.textContent = 'Error al enviar.';
+        }
+      } catch (err) {
+        console.error(err);
+        if (statusEl) statusEl.textContent = 'Error al enviar.';
       }
     });
+  })();
+</script>
 
-    // Envío por AJAX (compatible con Netlify Forms) + mensajes de estado
-    (function () {
-      const form = document.getElementById('contact-form');
-      if (!form) return;
-      const statusEl = document.getElementById('form-status');
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault(); // forzamos AJAX para evitar que otro JS bloquee el submit nativo
-        try {
-          if (statusEl) statusEl.textContent = 'Enviando…';
-
-          const data = new FormData(form);
-          if (!data.get('form-name')) data.set('form-name', 'contacto'); // requerido por Netlify
-
-          const resp = await fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(data).toString()
-          });
-
-          if (resp.ok) {
-            if (statusEl) statusEl.textContent = 'Enviado, redirigiendo…';
-            window.location.href = form.getAttribute('action') || '/gracias.html';
-          } else {
-            if (statusEl) statusEl.textContent = 'No se pudo enviar. Intenta nuevamente.';
-            alert('No se pudo enviar el formulario. Intenta nuevamente.');
-          }
-        } catch (err) {
-          console.error(err);
-          if (statusEl) statusEl.textContent = 'Error al enviar.';
-          alert('Ocurrió un error al enviar el formulario.');
-        }
-      });
-    })();
-  </script>
-
-  <!-- Chat -->
-  <script
-    data-builderbot-chat
-    data-company="Ventas"
-    data-id="9662dfa1-d5e8-480c-88da-dfb69d2b4b71"
-    src="https://cdn.builderbot.cloud/sdk.umd.js"
-  ></script>
+<script data-builderbot-chat data-company="Ventas"
+        data-id="9662dfa1-d5e8-480c-88da-dfb69d2b4b71"
+        src="https://cdn.builderbot.cloud/sdk.umd.js"></script>
 </body>
 </html>
