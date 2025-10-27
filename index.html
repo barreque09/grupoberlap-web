@@ -222,18 +222,41 @@
               </div>
 
               <div class="mb-3">
-                <label class="form-label" for="service-type">Tipo de Servicio</label>
-                <select class="form-select" id="service-type" name="servicio" required>
-                  <option value="" selected disabled>Elija un servicio...</option>
-                  <option value="Ultrasonido (UT)">Ultrasonido (UT)</option>
-                  <option value="Líquidos Penetrantes (LP)">Líquidos Penetrantes (LP)</option>
-                  <option value="Inspección Visual (VT)">Inspección Visual (VT)</option>
-                  <option value="Partículas Magnéticas (MT)">Partículas Magnéticas (MT)</option>
-                  <option value="Medición de Espesores (UTT)">Medición de Espesores (UTT)</option>
-                  <option value="Radiografía Industrial (RT)">Radiografía Industrial (RT)</option>
-                  <option value="Otro">Otro</option>
-                </select>
+              <label class="form-label">Servicios requeridos</label>
+
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="srv-ut" name="servicios" value="Ultrasonido (UT)">
+              <label class="form-check-label" for="srv-ut">Ultrasonido (UT)</label>
               </div>
+
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="srv-lp" name="servicios" value="Líquidos Penetrantes (LP)">
+              <label class="form-check-label" for="srv-lp">Líquidos Penetrantes (LP)</label>
+              </div>
+
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="srv-vt" name="servicios" value="Inspección Visual (VT)">
+              <label class="form-check-label" for="srv-vt">Inspección Visual (VT)</label>
+              </div>
+
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="srv-mt" name="servicios" value="Partículas Magnéticas (MT)">
+              <label class="form-check-label" for="srv-mt">Partículas Magnéticas (MT)</label>
+              </div>
+
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="srv-utt" name="servicios" value="Medición de Espesores (UTT)">
+              <label class="form-check-label" for="srv-utt">Medición de Espesores (UTT)</label>
+              </div>
+
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="srv-rt" name="servicios" value="Radiografía Industrial (RT)">
+              <label class="form-check-label" for="srv-rt">Radiografía Industrial (RT)</label>
+              </div>
+
+              <small class="text-muted d-block mt-1">Puedes seleccionar uno o varios.</small>
+              </div>
+
 
               <div class="mb-3">
                 <label class="form-label" for="message">Mensaje</label>
