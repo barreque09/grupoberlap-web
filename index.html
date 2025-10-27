@@ -260,36 +260,34 @@
 </form>
 
 <script>
-  // Plan B: envío por Fetch si algo impide el submit nativo
   (function () {
     const form = document.getElementById('contact-form');
     if (!form) return;
 
     form.addEventListener('submit', async (e) => {
-      // Si todo está OK, deja que haga submit normal.
-      // Sólo usamos fetch si algo raro lo impide (comenta la siguiente línea para probar el plan B).
-      return;
+      // Forzar envío por AJAX
+      e.preventDefault();
 
-      // ---- PLAN B (descomenta para forzar AJAX) ----
-      // e.preventDefault();
-      // try {
-      //   const data = new FormData(form);
-      //   // Netlify necesita este campo también cuando enviamos vía fetch
-      //   if (!data.get('form-name')) data.set('form-name', 'contacto');
-      //   const resp = await fetch('/', {
-      //     method: 'POST',
-      //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      //     body: new URLSearchParams(data).toString()
-      //   });
-      //   if (resp.ok) {
-      //     window.location.href = form.getAttribute('action') || '/gracias.html';
-      //   } else {
-      //     alert('No se pudo enviar el formulario. Intenta nuevamente.');
-      //   }
-      // } catch (err) {
-      //   console.error(err);
-      //   alert('Ocurrió un error al enviar el formulario.');
-      // }
+      try {
+        const data = new FormData(form);
+        // Netlify necesita este campo también cuando enviamos vía fetch
+        if (!data.get('form-name')) data.set('form-name', 'contacto');
+
+        const resp = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString()
+        });
+
+        if (resp.ok) {
+          window.location.href = form.getAttribute('action') || '/gracias.html';
+        } else {
+          alert('No se pudo enviar el formulario. Intenta nuevamente.');
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Ocurrió un error al enviar el formulario.');
+      }
     });
   })();
 </script>
