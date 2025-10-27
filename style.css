@@ -159,3 +159,37 @@ body {
     text-align: center;
   }
 }
+/* Botón flotante de WhatsApp */
+#whatsapp-fab{
+  position: fixed;
+  right: 24px;
+  bottom: 110px;                 /* ← lo elevamos para que no lo tape el chat */
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+  z-index: 2147483000;           /* por encima del widget del chat */
+}
+#whatsapp-fab:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0,0,0,.22);
+  filter: brightness(1.05);
+}
+
+/* En móviles lo movemos a la izquierda del chat (si molesta) */
+@media (max-width: 576px){
+  #whatsapp-fab{
+    right: 24px;
+    bottom: 110px;               /* puedes subir/bajar este valor si aún se enciman */
+  }
+}
+
+/* Si prefieres ponerlo a la izquierda siempre, usa esto en vez del 'right' */
+/* #whatsapp-fab{ right: auto; left: 24px; bottom: 24px; } */
