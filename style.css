@@ -1,89 +1,89 @@
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 70px; /* Ajustado para navbar más alta */
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* Ajustado para navbar más alta */
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ===== NAVBAR ===== */
 .navbar-brand img {
-    height: 96px;
-    max-height: 120px;
-    width: auto;
+  height: 96px;
+  max-height: 120px;
+  width: auto;
 }
 
 .navbar-ribbon {
-    background-color: rgba(255,255,255,0.85);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+  background-color: rgba(255,255,255,0.85);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 .navbar-ribbon .nav-link {
-    color: #0d3b66;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    font-size: 0.95rem;
-    padding: .6rem .9rem;
+  color: #0d3b66;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 0.95rem;
+  padding: .6rem .9rem;
 }
 .navbar-ribbon .nav-link:hover,
 .navbar-ribbon .nav-link:focus,
 .navbar-ribbon .nav-link.active {
-    color: #06293e;
-    border-bottom: 3px solid #0d6efd;
-    border-radius: 2px;
+  color: #06293e;
+  border-bottom: 3px solid #0d6efd;
+  border-radius: 2px;
 }
 
 /* ===== HERO ===== */
 .hero-section {
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-image.png') no-repeat center center;
-    background-size: cover;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-image.png') no-repeat center center;
+  background-size: cover;
 }
 
 /* ===== TARJETAS GENERALES ===== */
 .service-icon {
-    width: 80px;
-    height: 80px;
-    margin: 20px auto;
-    object-fit: contain;
+  width: 80px;
+  height: 80px;
+  margin: 20px auto;
+  object-fit: contain;
 }
 
 .card {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
 }
 
 /* ===== SECCIONES GENERALES ===== */
 #about img {
-    max-height: 400px;
-    object-fit: cover;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 #contact {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 /* ===== TESTIMONIOS ===== */
 #testimonials .carousel-item {
-    padding: 1.5rem 2rem;
+  padding: 1.5rem 2rem;
 }
 #testimonials blockquote {
-    font-size: 1.05rem;
-    color: #0b2b3a;
-    margin: 0 auto;
-    max-width: 900px;
+  font-size: 1.05rem;
+  color: #0b2b3a;
+  margin: 0 auto;
+  max-width: 900px;
 }
 #testimonials .card img {
-    filter: none;
+  filter: none;
 }
 @media (max-width: 767px) {
-    #testimonials blockquote { font-size: 0.98rem; padding: 0 0.5rem; }
+  #testimonials blockquote { font-size: 0.98rem; padding: 0 0.5rem; }
 }
 
 /* ===== SERVICIOS (MITAD IMAGEN / MITAD TEXTO) ===== */
@@ -93,30 +93,45 @@ body {
   justify-content: space-between;
   gap: 2rem;
   margin-bottom: 3rem;
-  opacity: 0;               /* oculto al inicio */
-  transform: translateY(50px);
+  opacity: 1;               /* visible por defecto */
+  transform: none;
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+/* Si el JS activa la animación, esta clase aplica */
 .service-row.visible {
-  opacity: 1;               /* visible al entrar */
+  opacity: 1;
   transform: translateY(0);
 }
 
+/* Configuración de orden inverso */
 .service-row.reverse { flex-direction: row-reverse; }
 
-.service-image { flex: 1 1 45%; }
+/* Imágenes */
+.service-image { 
+  flex: 1 1 45%;
+  min-width: 0;
+}
 .service-image img {
+  display: block;
   width: 100%;
   height: auto;
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
   object-fit: cover;
   transition: transform .35s ease;
+  opacity: 1 !important;         /* fuerza visibilidad */
+  visibility: visible !important;
+  transform: none !important;
 }
-.service-image img:hover { transform: scale(1.02); }
+.service-image img:hover {
+  transform: scale(1.02);
+}
 
-.service-info { flex: 1 1 55%; }
+/* Texto */
+.service-info {
+  flex: 1 1 55%;
+}
 .service-info h3 {
   color: #0a3d5a;
   font-weight: 700;
@@ -137,6 +152,10 @@ body {
 
 /* Responsivo */
 @media (max-width: 992px) {
-  .service-row, .service-row.reverse { flex-direction: column; }
-  .service-info { text-align: center; }
+  .service-row, .service-row.reverse { 
+    flex-direction: column;
+  }
+  .service-info { 
+    text-align: center;
+  }
 }
