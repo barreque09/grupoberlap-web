@@ -28,7 +28,6 @@
   <!-- Choices.js (selector múltiple elegante) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
   <style>
-    /* Asegurar ancho completo del componente */
     .choices { width: 100%; }
   </style>
 
@@ -210,96 +209,61 @@
           expertos.</p>
         <div class="row">
           <div class="col-md-8 mx-auto">
+            <form
+              id="contact-form"
+              name="contacto"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/gracias.html"
+              accept-charset="UTF-8">
 
-            <form id="contact-form"
-      name="contacto"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      action="/gracias.html"
-      accept-charset="UTF-8">
+              <!-- Tiene que ir como primer hijo -->
+              <input type="hidden" name="form-name" value="contacto" />
 
-  <!-- Tiene que ir como primer hijo -->
-  <input type="hidden" name="form-name" value="contacto" />
+              <!-- Honeypot (oculto) -->
+              <p style="display:none;">
+                <label>No llenar si eres humano: <input name="bot-field" /></label>
+              </p>
 
-  <!-- Honeypot (oculto) -->
-  <p style="display:none;">
-    <label>No llenar si eres humano: <input name="bot-field" /></label>
-  </p>
+              <div class="mb-3">
+                <label class="form-label" for="name">Nombre</label>
+                <input class="form-control" id="name" name="nombre" type="text" required />
+              </div>
 
-  <div class="mb-3">
-    <label class="form-label" for="name">Nombre</label>
-    <input class="form-control" id="name" name="nombre" type="text" required />
-  </div>
+              <div class="mb-3">
+                <label class="form-label" for="email">Correo Electrónico</label>
+                <input class="form-control" id="email" name="correo" type="email" required />
+              </div>
 
-  <div class="mb-3">
-    <label class="form-label" for="email">Correo Electrónico</label>
-    <input class="form-control" id="email" name="correo" type="email" required />
-  </div>
+              <!-- Selector múltiple -->
+              <div class="mb-3">
+                <label class="form-label" for="service-type">Servicios requeridos</label>
+                <select class="form-select" id="service-type" name="servicios[]" multiple>
+                  <option value="Ultrasonido (UT)">Ultrasonido (UT)</option>
+                  <option value="Líquidos Penetrantes (LP)">Líquidos Penetrantes (LP)</option>
+                  <option value="Inspección Visual (VT)">Inspección Visual (VT)</option>
+                  <option value="Partículas Magnéticas (MT)">Partículas Magnéticas (MT)</option>
+                  <option value="Medición de Espesores (UTT)">Medición de Espesores (UTT)</option>
+                  <option value="Radiografía Industrial (RT)">Radiografía Industrial (RT)</option>
+                </select>
+                <small class="text-muted d-block mt-1">Selecciona uno o varios.</small>
+              </div>
 
-  <!-- Selector múltiple -->
-  <div class="mb-3">
-    <label class="form-label" for="service-type">Servicios requeridos</label>
-    <select class="form-select" id="service-type" name="servicios[]" multiple>
-      <option value="Ultrasonido (UT)">Ultrasonido (UT)</option>
-      <option value="Líquidos Penetrantes (LP)">Líquidos Penetrantes (LP)</option>
-      <option value="Inspección Visual (VT)">Inspección Visual (VT)</option>
-      <option value="Partículas Magnéticas (MT)">Partículas Magnéticas (MT)</option>
-      <option value="Medición de Espesores (UTT)">Medición de Espesores (UTT)</option>
-      <option value="Radiografía Industrial (RT)">Radiografía Industrial (RT)</option>
-    </select>
-    <small class="text-muted d-block mt-1">Selecciona uno o varios.</small>
-  </div>
+              <div class="mb-3">
+                <label class="form-label" for="message">Mensaje</label>
+                <textarea class="form-control" id="message" name="mensaje" rows="4" required></textarea>
+              </div>
 
-  <div class="mb-3">
-    <label class="form-label" for="message">Mensaje</label>
-    <textarea class="form-control" id="message" name="mensaje" rows="4" required></textarea>
-  </div>
-
-  <button class="btn btn-primary w-100" type="submit">Enviar Mensaje</button>
-</form>
-
-<script>
-  (function () {
-    const form = document.getElementById('contact-form');
-    if (!form) return;
-
-    form.addEventListener('submit', async (e) => {
-      // Forzar envío por AJAX
-      e.preventDefault();
-
-      try {
-        const data = new FormData(form);
-        // Netlify necesita este campo también cuando enviamos vía fetch
-        if (!data.get('form-name')) data.set('form-name', 'contacto');
-
-        const resp = await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(data).toString()
-        });
-
-        if (resp.ok) {
-          window.location.href = form.getAttribute('action') || '/gracias.html';
-        } else {
-          alert('No se pudo enviar el formulario. Intenta nuevamente.');
-        }
-      } catch (err) {
-        console.error(err);
-        alert('Ocurrió un error al enviar el formulario.');
-      }
-    });
-  })();
-</script>
+              <button class="btn btn-primary w-100" type="submit">Enviar Mensaje</button>
+              <div id="form-status" class="small text-muted mt-2"></div>
+            </form>
 
             <div class="mt-3 text-center">
               <p class="mb-1">📞 Tel: (+52) 55 0000 0000</p>
-              <p class="mb-1">✉️ Email:
-                <a href="mailto:ventas@grupoberlap.com">ventas@grupoberlap.com</a>
-              </p>
+              <p class="mb-1">✉️ Email: <a href="mailto:ventas@grupoberlap.com">ventas@grupoberlap.com</a></p>
               <p class="mb-0">📍 Monterrey N.L. / Cobertura Nacional</p>
-              <a class="btn btn-success btn-sm mt-3" href="https://wa.me/525500000000" target="_blank"
-                rel="noopener">Enviar WhatsApp</a>
+              <a class="btn btn-success btn-sm mt-3" href="https://wa.me/525500000000" target="_blank" rel="noopener">Enviar WhatsApp</a>
             </div>
           </div>
         </div>
@@ -320,11 +284,10 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   ></script>
 
-  <!-- Tu JS (si tienes) -->
-  <script src="script.js"></script>
-
   <!-- Choices.js -->
   <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+  <!-- Envío seguro y UI -->
   <script>
     // Inicializar el selector múltiple
     document.addEventListener('DOMContentLoaded', function () {
@@ -340,16 +303,42 @@
           position: 'bottom',
         });
       }
-
-      // Animación de aparición para .service-row
-      const rows = document.querySelectorAll(".service-row");
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      }, { threshold: 0.15 });
-      rows.forEach(row => observer.observe(row));
     });
+
+    // Envío por AJAX (compatible con Netlify Forms) + mensajes de estado
+    (function () {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+      const statusEl = document.getElementById('form-status');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // forzamos AJAX para evitar que otro JS bloquee el submit nativo
+        try {
+          if (statusEl) statusEl.textContent = 'Enviando…';
+
+          const data = new FormData(form);
+          if (!data.get('form-name')) data.set('form-name', 'contacto'); // requerido por Netlify
+
+          const resp = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(data).toString()
+          });
+
+          if (resp.ok) {
+            if (statusEl) statusEl.textContent = 'Enviado, redirigiendo…';
+            window.location.href = form.getAttribute('action') || '/gracias.html';
+          } else {
+            if (statusEl) statusEl.textContent = 'No se pudo enviar. Intenta nuevamente.';
+            alert('No se pudo enviar el formulario. Intenta nuevamente.');
+          }
+        } catch (err) {
+          console.error(err);
+          if (statusEl) statusEl.textContent = 'Error al enviar.';
+          alert('Ocurrió un error al enviar el formulario.');
+        }
+      });
+    })();
   </script>
 
   <!-- Chat -->
