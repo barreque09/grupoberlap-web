@@ -30,3 +30,26 @@ form .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
 .has-dropdown .dropdown a:hover{background:rgba(255,255,255,.06)}
 .has-dropdown:hover .dropdown{display:block}
 @media (max-width:900px){.main-nav .nav-list{gap:8px}.has-dropdown.open .dropdown{display:block}form .row{grid-template-columns:1fr}}
+/* ---- Ajustes responsive header ---- */
+.brand img{height:40px}
+.menu-toggle{
+  display:none; background:transparent; border:1px solid rgba(255,255,255,.25);
+  color:#e6f3f7; padding:8px 12px; border-radius:10px; font-size:20px; cursor:pointer;
+}
+@media (max-width: 860px){
+  .menu-toggle{display:block}
+  .main-nav{position:fixed; inset:64px 0 auto 0; /* bajo el header */
+    background:rgba(3,12,20,.98); border-top:1px solid rgba(255,255,255,.08);
+    display:none; z-index:1200;
+  }
+  .main-nav.open{display:block}
+  .main-nav .nav-list{flex-direction:column; align-items:flex-start; gap:0; padding:8px 12px}
+  .main-nav a{width:100%; padding:12px 10px}
+  .has-dropdown .dropdown{position:static; display:none; margin:0; padding:6px 0; background:transparent; border:0; box-shadow:none}
+  .has-dropdown.open .dropdown{display:block}
+  /* Hero más contenido en móvil */
+  .hero img{max-height:360px !important}
+}
+
+/* Evita que el hero “rompa” el ancho en móviles muy chicos */
+img{max-width:100%; height:auto}
