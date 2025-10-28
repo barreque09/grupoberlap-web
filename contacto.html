@@ -1,73 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Grupo Berlap</title>
-  <meta name="description" content="Solicita cotización o habla con un especialista. Monterrey N.L. / Cobertura Nacional.">
-  <link rel="canonical" href="https://www.grupoberlap.com/contacto.html">
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
-  
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contacto | Grupo Berlap</title><meta name="description" content="Solicita una cotización o asesoría técnica."><link rel="stylesheet" href="/assets/css/style.css"></head><body>
 <header class="site-header">
   <div class="container flex space-between center-v">
-    <a class="brand" href="/">
-      <img src="/assets/img/logo.svg" alt="Grupo Berlap logo">
-      <span class="logo-text">Grupo Berlap</span>
-    </a>
-    <nav class="main-nav">
-      <a href="/">Inicio</a>
-      <a href="/nosotros.html">Nosotros</a>
-      <a href="/servicios/ultrasonido-industrial.html">Ultrasonido</a>
-      <a href="/servicios/liquidos-penetrantes.html">Líquidos Penetrantes</a>
-      <a href="/servicios/particulas-magneticas.html">Partículas Magnéticas</a>
-      <a href="/servicios/inspeccion-visual.html">Inspección Visual</a>
-      <a class="cta" href="/contacto.html">Contacto</a>
+    <a class="brand" href="/"><img src="/assets/img/logo.svg" alt="Grupo Berlap logo"/><span class="logo-text">Grupo Berlap</span></a>
+    <nav class="main-nav" aria-label="Principal">
+      <ul class="nav-list">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/nosotros.html">Nosotros</a></li>
+        <li class="has-dropdown"><a href="/#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
+          <ul class="dropdown" aria-label="Submenú de servicios">
+            <li><a href="/servicios/ultrasonido-industrial.html">Ultrasonido (UT)</a></li>
+            <li><a href="/servicios/liquidos-penetrantes.html">Líquidos penetrantes (LP)</a></li>
+            <li><a href="/servicios/particulas-magneticas.html">Partículas magnéticas (MT)</a></li>
+            <li><a href="/servicios/inspeccion-visual.html">Inspección visual (VT)</a></li>
+            <li><a href="/servicios/medicion-de-espesores.html">Medición de espesores (UTT)</a></li>
+            <li><a href="/servicios/radiografia-industrial.html">Radiografía industrial (RT)</a></li>
+          </ul>
+        </li>
+        <li><a href="/contacto.html">Contacto</a></li>
+      </ul>
     </nav>
   </div>
 </header>
-
-  <main class="section">
-    <div class="container">
-      <h1>Contacto</h1>
-      <p>Cuéntanos de tu proyecto y con gusto te apoyamos.</p>
-      <form action="/gracias.html" method="get">
-        <div class="row">
-          <div>
-            <label>Nombre</label>
-            <input class="field" type="text" name="nombre" required>
-          </div>
-          <div>
-            <label>Correo</label>
-            <input class="field" type="email" name="correo" required>
-          </div>
-        </div>
-        <label>Empresa</label>
-        <input class="field" type="text" name="empresa">
-        <label>Servicio de interés</label>
-        <input class="field" type="text" name="servicio">
-        <label>Mensaje</label>
-        <textarea class="field" name="mensaje" rows="5" required></textarea>
-        <button class="btn" type="submit">Enviar</button>
-      </form>
-      <p>Tel: (+52) 55 0000 0000 · ✉️ <a href="mailto:ventas@grupoberlap.com">ventas@grupoberlap.com</a></p>
-    </div>
-  </main>
-  
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2025 Grupo Berlap — Ensayos No Destructivos (END) en México.</p>
-    <p><a href="/contacto.html">Solicitar cotización</a> · <a href="https://wa.me/525500000000" target="_blank" rel="noopener">WhatsApp</a></p>
-  </div>
-</footer>
-
-  
-<a id="whatsapp-fab" href="https://wa.me/525500000000" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" title="WhatsApp">
-  <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
-    <path d="M19.11 17.3c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.62.14-.18.27-.71.87-.87 1.05-.16.18-.32.2-.6.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.49.14-.16.18-.27.18-.45 0-.18-.01-.4-.01-.62 0-.23-.06-.54-.28-.84-.21-.3-.65-.46-.99-.46-.25 0-.52.01-.8.02-.28.01-.59.03-.89.34-.31.31-1.17 1.14-1.17 2.77s1.2 3.21 1.36 3.43c.17.22 2.33 3.56 5.65 4.83.79.31 1.4.49 1.87.63.79.25 1.51.21 2.08.13.64-.09 1.98-.81 2.26-1.59.28-.78.28-1.45.2-1.59-.08-.14-.25-.22-.52-.36z"></path>
-  </svg>
-</a>
-
-</body>
-</html>
+<main class="section"><div class="container"><h1>Contacto</h1><form action="/gracias.html" method="get"><div class="row"><div><label>Nombre</label><input class="field" name="nombre" required></div><div><label>Correo</label><input class="field" type="email" name="correo" required></div></div><label>Empresa</label><input class="field" name="empresa"><label>Servicio de interés</label><input class="field" name="servicio"><label>Mensaje</label><textarea class="field" name="mensaje" rows="5" required></textarea><button class="btn" type="submit">Enviar</button></form></div></main><footer class="site-footer"><div class="container"><p>© 2025 Grupo Berlap — Ensayos No Destructivos (END) en México.</p>
+<p><a href="/contacto.html">Solicitar cotización</a> · <a href="https://wa.me/525500000000" target="_blank" rel="noopener">WhatsApp</a></p></div></footer><a id="whatsapp-fab" href="https://wa.me/525500000000" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" title="WhatsApp"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M19.11 17.3c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.62.14-.18.27-.71.87-.87 1.05-.16.18-.32.2-.6.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.49.14-.16.18-.27.18-.45 0-.18-.01-.4-.01-.62 0-.23-.06-.54-.28-.84-.21-.3-.65-.46-.99-.46-.25 0-.52.01-.8.02-.28.01-.59.03-.89.34-.31.31-1.17 1.14-1.17 2.77s1.2 3.21 1.36 3.43c.17.22 2.33 3.56 5.65 4.83.79.31 1.4.49 1.87.63.79.25 1.51.21 2.08.13.64-.09 1.98-.81 2.26-1.59.28-.78.28-1.45.2-1.59-.08-.14-.25-.22-.52-.36z"></path></svg></a></body></html>
