@@ -1,85 +1,236 @@
+:root {
+  --bg: #0b1220;
+  --fg: #e6f3f7;
+  --muted: #9fb4bb;
+  --accent: #0ea5b7;
+  --link: #22d3ee;
+  --card: rgba(255, 255, 255, .05);
+}
 
-:root{--bg:#0b1220;--fg:#e6f3f7;--muted:#9fb4bb;--accent:#0ea5b7;--link:#22d3ee;--card:rgba(255,255,255,.05)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
-a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-.flex{display:flex}.space-between{justify-content:space-between}.center-v{align-items:center}.grid{display:grid;gap:20px}
-.site-header{position:sticky;top:0;background:rgba(1,9,18,.8);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
-.brand{display:flex;gap:10px;align-items:center}.brand img{height:28px}.logo-text{font-weight:800;letter-spacing:.3px}
-.main-nav a{margin:0 10px}.main-nav .cta{padding:8px 14px;border:1px solid rgba(255,255,255,.15);border-radius:10px}
-.hero{padding:80px 0;background:radial-gradient(1200px 500px at 50% -50%, rgba(34,211,238,.18), rgba(34,211,238,0) 60%)}
-.hero h1{font-size:clamp(28px,4vw,44px);margin:.2em 0}.hero p{color:var(--muted);max-width:720px}
-.cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px}
-.card h3{margin:.2em 0 .4em 0}.btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:12px;background:var(--accent);color:#02131a;font-weight:700}
-.section{padding:56px 0;border-top:1px solid rgba(255,255,255,.06)}
-.site-footer{padding:36px 0;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
-#whatsapp-fab{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);z-index:60}
-#whatsapp-fab svg{fill:#fff}
-figure{margin:0 0 16px 0}
-.service-hero{display:grid;gap:16px;grid-template-columns:1fr 1fr}
-.service-hero img{width:100%;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#06121a;object-fit:cover;max-height:360px}
-form label{display:block;margin:.6rem 0 .2rem}.field{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#fff}
-form .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+* { box-sizing: border-box }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--link); text-decoration: none }
+a:hover { text-decoration: underline }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px }
+.flex { display: flex }
+.space-between { justify-content: space-between }
+.center-v { align-items: center }
+.grid { display: grid; gap: 20px }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(1,9,18,.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  z-index: 3000;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.brand img { height: 40px }
+.logo-text { font-weight: 800; letter-spacing: .3px }
+
+.main-nav a { margin: 0 10px }
+.main-nav .cta {
+  padding: 8px 14px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 10px;
+}
+
+.hero {
+  padding: 80px 0;
+  background: radial-gradient(1200px 500px at 50% -50%, rgba(34,211,238,.18), rgba(34,211,238,0) 60%);
+}
+.hero h1 { font-size: clamp(28px,4vw,44px); margin: .2em 0 }
+.hero p { color: var(--muted); max-width: 720px }
+
+.cards { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) }
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 16px;
+  padding: 18px;
+}
+.card h3 { margin: .2em 0 .4em 0 }
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #02131a;
+  font-weight: 700;
+}
+.section {
+  padding: 56px 0;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.site-footer {
+  padding: 36px 0;
+  border-top: 1px solid rgba(255,255,255,.06);
+  color: var(--muted);
+}
+
+#whatsapp-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  background: #25D366;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  z-index: 4000;
+}
+#whatsapp-fab svg { fill: #fff }
+
+figure { margin: 0 0 16px 0 }
+
+.service-hero {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+}
+.service-hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: #06121a;
+  object-fit: cover;
+  max-height: 360px;
+}
+
+form label { display: block; margin: .6rem 0 .2rem }
+.field {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  color: #fff;
+}
+form .row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr }
+
 /* Dropdown */
-.main-nav .nav-list{list-style:none;margin:0;padding:0;display:flex;gap:14px;align-items:center}
-.main-nav .nav-list>li{position:relative}
-.main-nav a{display:inline-block;padding:10px 8px}
-.has-dropdown>a::after{content:"▾";margin-left:6px;font-size:.85em;opacity:.7}
-.has-dropdown .dropdown{position:absolute;top:100%;left:0;min-width:320px;padding:10px 0;margin-top:8px;background:rgba(3,12,20,.96);border:1px solid rgba(255,255,255,.08);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.35);display:none;z-index:1000}
-.has-dropdown .dropdown li{list-style:none}.has-dropdown .dropdown a{display:block;white-space:nowrap;padding:10px 16px;width:100%}
-.has-dropdown .dropdown a:hover{background:rgba(255,255,255,.06)}
-.has-dropdown:hover .dropdown{display:block}
-@media (max-width:900px){.main-nav .nav-list{gap:8px}.has-dropdown.open .dropdown{display:block}form .row{grid-template-columns:1fr}}
-/* ---- Ajustes responsive header ---- */
-.brand img{height:40px}
-.menu-toggle{
-  display:none; background:transparent; border:1px solid rgba(255,255,255,.25);
-  color:#e6f3f7; padding:8px 12px; border-radius:10px; font-size:20px; cursor:pointer;
+.main-nav .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 14px;
+  align-items: center;
 }
-@media (max-width: 860px){
-  .menu-toggle{display:block}
-  .main-nav{position:fixed; inset:64px 0 auto 0; /* bajo el header */
-    background:rgba(3,12,20,.98); border-top:1px solid rgba(255,255,255,.08);
-    display:none; z-index:1200;
-  }
-  .main-nav.open{display:block}
-  .main-nav .nav-list{flex-direction:column; align-items:flex-start; gap:0; padding:8px 12px}
-  .main-nav a{width:100%; padding:12px 10px}
-  .has-dropdown .dropdown{position:static; display:none; margin:0; padding:6px 0; background:transparent; border:0; box-shadow:none}
-  .has-dropdown.open .dropdown{display:block}
-  /* Hero más contenido en móvil */
-  .hero img{max-height:360px !important}
-}
+.main-nav .nav-list > li { position: relative }
+.main-nav a { display: inline-block; padding: 10px 8px }
+.has-dropdown > a::after { content: "▾"; margin-left: 6px; font-size: .85em; opacity: .7 }
 
-/* Evita que el hero “rompa” el ancho en móviles muy chicos */
-img{max-width:100%; height:auto}
-/* --- Dropdown: que no se cierre al bajar el mouse --- */
-.site-header { z-index: 2000; }           /* que quede por encima de todo */
-.has-dropdown { position: relative; }     /* contenedor ancla */
+.has-dropdown { position: relative; }
 
-.dropdown{
+/* “Puente” invisible que mantiene el hover al bajar el cursor */
+.has-dropdown::after {
+  content: "";
   position: absolute;
   left: 0;
-  top: 100%;             /* pegado al botón, sin huecos */
-  margin-top: 0;         /* evita gap entre el botón y el menú */
+  right: 0;
+  top: 100%;
+  height: 10px;
+}
+
+/* Menú desplegable corregido */
+.has-dropdown .dropdown {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  min-width: 320px;
   padding: 8px 0;
-  display: none;
-  background: rgba(3,12,20,.98);
+  background: rgba(3,12,20,.96);
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 12px;
-  z-index: 3000;         /* por encima del hero y otros */
-  pointer-events: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  display: none;
+  z-index: 4000;
 }
-
-/* Mantén abierto mientras el puntero esté en el <li> o el foco dentro */
-.has-dropdown:hover > .dropdown,
-.has-dropdown:focus-within > .dropdown{
+.has-dropdown .dropdown li { list-style: none }
+.has-dropdown .dropdown a {
   display: block;
-}
-
-/* Área de click cómoda dentro del dropdown */
-.dropdown a{
-  display: block;
-  padding: 10px 14px;
   white-space: nowrap;
+  padding: 10px 16px;
+  width: 100%;
 }
+.has-dropdown .dropdown a:hover { background: rgba(255,255,255,.06) }
+
+/* Mostrar menú al pasar o enfocar */
+.has-dropdown:hover > .dropdown,
+.has-dropdown:focus-within > .dropdown {
+  display: block !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-nav .nav-list { gap: 8px }
+  .has-dropdown.open .dropdown { display: block }
+  form .row { grid-template-columns: 1fr }
+}
+
+/* Ajustes responsive header */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.25);
+  color: #e6f3f7;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media (max-width: 860px) {
+  .menu-toggle { display: block }
+  .main-nav {
+    position: fixed;
+    inset: 64px 0 auto 0;
+    background: rgba(3,12,20,.98);
+    border-top: 1px solid rgba(255,255,255,.08);
+    display: none;
+    z-index: 1200;
+  }
+  .main-nav.open { display: block }
+  .main-nav .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8px 12px;
+  }
+  .main-nav a { width: 100%; padding: 12px 10px }
+  .has-dropdown .dropdown {
+    position: static;
+    display: none;
+    margin: 0;
+    padding: 6px 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  .has-dropdown.open .dropdown { display: block }
+  .hero img { max-height: 360px !important }
+}
+
+/* Evita que el hero rompa el ancho en móviles */
+img { max-width: 100%; height: auto }
