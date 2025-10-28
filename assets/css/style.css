@@ -53,3 +53,33 @@ form .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
 
 /* Evita que el hero “rompa” el ancho en móviles muy chicos */
 img{max-width:100%; height:auto}
+/* --- Dropdown: que no se cierre al bajar el mouse --- */
+.site-header { z-index: 2000; }           /* que quede por encima de todo */
+.has-dropdown { position: relative; }     /* contenedor ancla */
+
+.dropdown{
+  position: absolute;
+  left: 0;
+  top: 100%;             /* pegado al botón, sin huecos */
+  margin-top: 0;         /* evita gap entre el botón y el menú */
+  padding: 8px 0;
+  display: none;
+  background: rgba(3,12,20,.98);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  z-index: 3000;         /* por encima del hero y otros */
+  pointer-events: auto;
+}
+
+/* Mantén abierto mientras el puntero esté en el <li> o el foco dentro */
+.has-dropdown:hover > .dropdown,
+.has-dropdown:focus-within > .dropdown{
+  display: block;
+}
+
+/* Área de click cómoda dentro del dropdown */
+.dropdown a{
+  display: block;
+  padding: 10px 14px;
+  white-space: nowrap;
+}
