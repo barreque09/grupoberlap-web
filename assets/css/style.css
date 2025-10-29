@@ -314,3 +314,14 @@ form .row {
     transform: translateY(20px);
   }
 }
+/* === Ajuste: bajar el texto debajo del rostro del técnico === */
+.hero-impact.refined .hero-landing__content {
+  transform: translateY(120px); /* mueve hacia abajo el texto */
+}
+
+/* En móviles: menos desplazamiento para mantener buena proporción */
+@media (max-width: 768px) {
+  .hero-impact.refined .hero-landing__content {
+    transform: translateY(40px);
+  }
+}
