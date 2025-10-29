@@ -262,3 +262,48 @@ img { max-width: 100%; height: auto }
 @media (max-width: 420px){
   .logo-text{ max-width: 55vw; }
 }
+/* ===== HERO IMPACTANTE (con animaciones suaves) ===== */
+.hero-impact{
+  position:relative;
+  height:100vh;                /* ocupa toda la pantalla */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
+.hero-impact .hero-landing__bg img{
+  width:100%; height:100%; object-fit:cover;
+  transform:scale(1.05);
+  filter:brightness(0.85);
+  animation: zoomSlow 12s ease-in-out infinite alternate;
+}
+@keyframes zoomSlow{
+  from{transform:scale(1.05);}
+  to{transform:scale(1.1);}
+}
+
+/* Animaciones de entrada */
+.animate-title{
+  opacity:0;
+  transform:translateY(30px);
+  animation: fadeUp 1.2s ease forwards;
+}
+.animate-sub{
+  opacity:0;
+  transform:translateY(20px);
+  animation: fadeUp 1.5s ease forwards;
+  animation-delay:.3s;
+}
+.animate-btns{
+  opacity:0;
+  transform:translateY(20px);
+  animation: fadeUp 1.5s ease forwards;
+  animation-delay:.6s;
+}
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
