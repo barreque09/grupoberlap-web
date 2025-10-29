@@ -374,3 +374,79 @@ img { max-width: 100%; height: auto }
 .animate-sub{opacity:0;transform:translateY(20px);animation:fadeUp 1.2s ease forwards;animation-delay:.2s;}
 .animate-btns{opacity:0;transform:translateY(20px);animation:fadeUp 1.2s ease forwards;animation-delay:.5s;}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
+/* ===== HERO IMPACTANTE CENTRADO ===== */
+.hero-centered {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-centered .hero-landing__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7); /* oscurece para resaltar texto */
+  transform: scale(1.05);
+  animation: zoomSlow 12s ease-in-out infinite alternate;
+}
+
+.hero-centered .hero-landing__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* overlay oscuro */
+}
+
+.hero-centered .hero-landing__content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 850px;
+  padding: 0 20px;
+}
+
+.hero-centered .hero-landing__content h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.hero-centered .hero-landing__content p {
+  font-size: 1.2rem;
+  color: #d5edf3;
+  margin-bottom: 30px;
+}
+
+/* Botones */
+.btn-primary {
+  display: inline-block;
+  background: #0891b2;
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 26px;
+  border-radius: 10px;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background: #06b6d4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.btn-primary.alt {
+  background: #0ea5b7;
+}
+.btn-primary.alt:hover {
+  background: #22d3ee;
+}
+
+/* Animaciones suaves */
+.animate-title {opacity: 0; transform: translateY(30px); animation: fadeUp 1s ease forwards;}
+.animate-sub {opacity: 0; transform: translateY(20px); animation: fadeUp 1.2s ease forwards; animation-delay: .2s;}
+.animate-btns {opacity: 0; transform: translateY(20px); animation: fadeUp 1.2s ease forwards; animation-delay: .5s;}
+@keyframes fadeUp {to {opacity: 1; transform: translateY(0);}}
+@keyframes zoomSlow {from {transform: scale(1.05);} to {transform: scale(1.1);}}
