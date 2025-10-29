@@ -289,3 +289,28 @@ form .row {
 /* === ANIMACIONES === */
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 @keyframes zoomSlow { from { transform: scale(1.05); } to { transform: scale(1.1); } }
+/* === Ajuste de posición del texto en el hero === */
+.hero-impact.refined .hero-landing__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 8%;
+  max-width: 650px;
+  transform: translateY(60px); /* Baja el texto */
+}
+
+/* En pantallas grandes, un poco más a la derecha */
+@media (min-width: 992px) {
+  .hero-impact.refined .hero-landing__content {
+    margin-left: 38%; /* mueve el bloque a la derecha */
+    text-align: left; /* texto alineado más natural */
+  }
+}
+
+/* En pantallas chicas, vuelve centrado */
+@media (max-width: 768px) {
+  .hero-impact.refined .hero-landing__content {
+    margin-left: 0;
+    text-align: center;
+    transform: translateY(20px);
+  }
+}
