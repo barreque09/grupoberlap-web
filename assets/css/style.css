@@ -325,3 +325,14 @@ form .row {
     transform: translateY(40px);
   }
 }
+/* === Ajuste: mover texto justo debajo del rostro del técnico === */
+.hero-impact.refined .hero-landing__content {
+  transform: translateY(70px); /* baja el texto sin alterar su alineación */
+}
+
+/* En móviles: menos desplazamiento para mantener proporción */
+@media (max-width: 768px) {
+  .hero-impact.refined .hero-landing__content {
+    transform: translateY(30px);
+  }
+}
