@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://www.grupoberlap.com/sitemap.xml
