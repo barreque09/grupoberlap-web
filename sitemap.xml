@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Página principal -->
-  <url>
-    <loc>https://www.grupoberlap.com/</loc>
-    <lastmod>2025-10-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://www.grupoberlap.com/</loc><lastmod>2025-10-28T22:12:46</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.grupoberlap.com/nosotros.html</loc><lastmod>2025-10-28T22:12:46</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.grupoberlap.com/contacto.html</loc><lastmod>2025-10-28T22:12:46</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.grupoberlap.com/servicios/ultrasonido-industrial.html</loc><lastmod>2025-10-28T22:12:46</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.grupoberlap.com/servicios/liquidos-penetrantes.html</loc><lastmod>2025-10-28T22:12:46</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.grupoberlap.com/servicios/particulas-magneticas.html</loc><lastmod>2025-10-28T22:12:46</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.grupoberlap.com/servicios/inspeccion-visual.html</loc><lastmod>2025-10-28T22:12:46</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.grupoberlap.com/servicios/medicion-de-espesores.html</loc><lastmod>2025-10-28T22:12:46</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.grupoberlap.com/servicios/radiografia-industrial.html</loc><lastmod>2025-10-28T22:12:46</lastmod><priority>0.8</priority></url>
 </urlset>
-
