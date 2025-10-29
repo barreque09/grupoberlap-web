@@ -234,3 +234,31 @@ form .row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr }
 
 /* Evita que el hero rompa el ancho en móviles */
 img { max-width: 100%; height: auto }
+/* ==== FIX: separaciones header en móvil (logo + texto + botón ☰) ==== */
+.site-header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;   /* separa brand y botón */
+  padding:10px 20px;
+  gap:12px;
+}
+
+/* Evita que el botón se pegue o se colapse */
+.menu-toggle{
+  flex-shrink:0;                   /* no se encoge */
+  margin-left:auto;                /* empuja a la derecha si hiciera falta */
+}
+
+/* Control de ancho de la marca para que el texto no invada el botón */
+.brand{min-width:0; flex:1; gap:10px}
+.brand img{height:40px; width:auto}
+.logo-text{
+  white-space:nowrap;              /* no haga salto raro */
+  overflow:hidden;
+  text-overflow:ellipsis;          /* si no cabe, pone … */
+}
+
+/* En pantallas muy chicas, limita el ancho del texto del logo */
+@media (max-width: 420px){
+  .logo-text{ max-width: 55vw; }
+}
