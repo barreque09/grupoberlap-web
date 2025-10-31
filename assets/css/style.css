@@ -174,3 +174,17 @@ form .row{display:grid; gap:12px; grid-template-columns:1fr 1fr}
 [class*="zopim"], [id*="zopim"]{
   pointer-events: none !important;
 }
+/* 1) Sube el FAB por encima de cualquier overlay viejo */
+#whatsapp-fab{
+  z-index: 2147483647 !important;   /* el más alto posible */
+  pointer-events: auto !important;  /* asegúrate de que reciba clics */
+}
+
+/* 2) Evita que capas de la hero capten clics si pasan por encima */
+.hero-landing__bg,
+.hero-gradient{
+  pointer-events: none !important;
+}
+
+/* 3) Si tu dropdown compite, bájalo un poco y evita que tape el FAB */
+.dropdown{ z-index: 5000 !important; }
