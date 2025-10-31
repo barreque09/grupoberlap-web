@@ -138,3 +138,31 @@ form .row{display:grid; gap:12px; grid-template-columns:1fr 1fr}
 /* ===== ANIMACIONES ===== */
 @keyframes fadeUp{to{opacity:1; transform:translateY(0)}}
 @keyframes zoomSlow{from{transform:scale(1.05)} to{transform:scale(1.1)}}
+/* ========== BOTÓN FLOTANTE WHATSAPP ========== */
+#whatsapp-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  background: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  z-index: 9999;
+  transition: transform 0.2s ease-in-out;
+}
+#whatsapp-fab:hover {
+  transform: translateY(-3px);
+}
+#whatsapp-fab:active {
+  transform: translateY(0);
+}
+#whatsapp-fab svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+  display: block;
+}
