@@ -6,7 +6,8 @@
 /* ===== RESET & BASE ===== */
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
-a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+a{color:var(--link);text-decoration:none} 
+a:hover{text-decoration:underline}
 img{max-width:100%;height:auto}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 
@@ -50,7 +51,7 @@ img{max-width:100%;height:auto}
 .dropdown a:hover{background:rgba(255,255,255,.06)}
 .has-dropdown:hover>.dropdown, .has-dropdown:focus-within>.dropdown{display:block !important}
 
-/* ===== HERO (alineado a la izquierda bajo el rostro) ===== */
+/* ===== HERO ===== */
 .hero-impact.refined{
   position:relative; height:100vh; color:#fff; overflow:hidden;
   display:flex; align-items:center; justify-content:flex-start;
@@ -63,24 +64,16 @@ img{max-width:100%;height:auto}
   position:absolute; left:0; top:0; bottom:0; width:55%;
   background:linear-gradient(to right, rgba(5,12,20,.9), rgba(5,12,20,0));
 }
-
-/* POSICIÓN EXACTA DEL TEXTO: debajo de la cara, lado izquierdo */
 .hero-impact.refined .hero-landing__content{
-  position:absolute;
-  left:10%;                  /* pegado al lado del técnico */
-  top:58%;                   /* bajado para quedar bajo el rostro */
-  transform:translateY(-40%);/* ajuste fino vertical */
-  text-align:left;
-  max-width:650px;
-  z-index:2;
+  position:absolute; left:10%; top:58%; transform:translateY(-40%);
+  text-align:left; max-width:650px; z-index:2;
 }
-
 .hero-impact.refined h1{
   font-size:clamp(28px,4vw,46px); line-height:1.25; font-weight:800; margin-bottom:16px;
 }
 .hero-impact.refined p{color:#cfe9f1; font-size:1.1rem; margin-bottom:28px}
 
-/* Botones */
+/* ===== BOTONES ===== */
 .btn-primary{
   display:inline-block; background:#0891b2; color:#fff; font-weight:700;
   padding:12px 22px; border-radius:10px; margin:0 8px 10px 0; transition:all .3s ease;
@@ -94,14 +87,6 @@ img{max-width:100%;height:auto}
 .card{background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:18px}
 .section{padding:56px 0; border-top:1px solid rgba(255,255,255,.06)}
 .site-footer{padding:36px 0; border-top:1px solid rgba(255,255,255,.06); color:var(--muted); text-align:center}
-
-/* ===== WHATSAPP FAB ===== */
-#whatsapp-fab{
-  position:fixed; right:18px; bottom:18px; background:#25D366; color:#fff;
-  width:56px; height:56px; border-radius:50%; display:grid; place-items:center;
-  box-shadow:0 8px 24px rgba(0,0,0,.35); z-index:4000;
-}
-#whatsapp-fab svg{fill:#fff}
 
 /* ===== FORM ===== */
 form label{display:block; margin:.6rem 0 .2rem}
@@ -126,8 +111,6 @@ form .row{display:grid; gap:12px; grid-template-columns:1fr 1fr}
   .has-dropdown .dropdown{position:static; display:none; margin:0; padding:6px 0; background:transparent; border:0; box-shadow:none}
   .has-dropdown.open .dropdown{display:block}
 }
-
-/* HERO en móvil: centrado y sin posición absoluta */
 @media (max-width:768px){
   .hero-impact.refined .hero-landing__content{
     position:relative; left:auto; top:auto; transform:none;
@@ -138,7 +121,8 @@ form .row{display:grid; gap:12px; grid-template-columns:1fr 1fr}
 /* ===== ANIMACIONES ===== */
 @keyframes fadeUp{to{opacity:1; transform:translateY(0)}}
 @keyframes zoomSlow{from{transform:scale(1.05)} to{transform:scale(1.1)}}
-/* ========== BOTÓN FLOTANTE WHATSAPP ========== */
+
+/* ===== FAB WHATSAPP DEFINITIVO ===== */
 #whatsapp-fab {
   position: fixed;
   right: 18px;
@@ -149,24 +133,25 @@ form .row{display:grid; gap:12px; grid-template-columns:1fr 1fr}
   place-items: center;
   background: #25D366;
   border-radius: 50%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
   text-decoration: none;
-  z-index: 9999;
+  z-index: 2147483647;
   transition: transform 0.2s ease-in-out;
+  pointer-events: auto;
 }
-#whatsapp-fab:hover {
-  transform: translateY(-3px);
-}
-#whatsapp-fab:active {
-  transform: translateY(0);
-}
+#whatsapp-fab:hover { transform: translateY(-3px); }
+#whatsapp-fab:active { transform: translateY(0); }
 #whatsapp-fab svg {
-  width: 28px;
-  height: 28px;
-  fill: #fff;
+  width: 28px !important;
+  height: 28px !important;
   display: block;
+  fill: #fff !important;
 }
-/* desactiva overlays residuales de chat */
+
+/* ===== FIXES CHAT ANTIGUO / OVERLAYS ===== */
+.hero-landing__bg,
+.hero-gradient { pointer-events: none !important; }
+
 [class*="chat"], [id*="chat"],
 [class*="crisp"], [id*="crisp"],
 [class*="tawk"], [id*="tawk"],
@@ -174,17 +159,5 @@ form .row{display:grid; gap:12px; grid-template-columns:1fr 1fr}
 [class*="zopim"], [id*="zopim"]{
   pointer-events: none !important;
 }
-/* 1) Sube el FAB por encima de cualquier overlay viejo */
-#whatsapp-fab{
-  z-index: 2147483647 !important;   /* el más alto posible */
-  pointer-events: auto !important;  /* asegúrate de que reciba clics */
-}
 
-/* 2) Evita que capas de la hero capten clics si pasan por encima */
-.hero-landing__bg,
-.hero-gradient{
-  pointer-events: none !important;
-}
-
-/* 3) Si tu dropdown compite, bájalo un poco y evita que tape el FAB */
-.dropdown{ z-index: 5000 !important; }
+.dropdown { z-index: 5000 !important; }
