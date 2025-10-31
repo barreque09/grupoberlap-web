@@ -166,3 +166,11 @@ form .row{display:grid; gap:12px; grid-template-columns:1fr 1fr}
   fill: #fff;
   display: block;
 }
+/* desactiva overlays residuales de chat */
+[class*="chat"], [id*="chat"],
+[class*="crisp"], [id*="crisp"],
+[class*="tawk"], [id*="tawk"],
+[class*="intercom"], [id*="intercom"],
+[class*="zopim"], [id*="zopim"]{
+  pointer-events: none !important;
+}
