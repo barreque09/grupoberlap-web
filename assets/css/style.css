@@ -92,7 +92,7 @@ p{color:var(--ink-soft)}
 .center-v{align-items:center}
 
 .brand{display:flex; align-items:center; gap:12px; min-width:0; flex:1}
-.brand img{height:44px; width:auto}
+.brand img{height:50px; width:auto}
 .logo-text{
   font-family:var(--f-display); font-weight:600; font-size:1.1rem;
   color:var(--ink) !important; white-space:nowrap;
