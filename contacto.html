@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://www.grupoberlap.com/contacto.html">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png">
   <meta name="theme-color" content="#0a0f16">
-  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=6">
 </head>
 <body>
 
@@ -48,7 +48,7 @@
       <h1 style="font-family:var(--f-display); font-size:clamp(28px,3.6vw,40px); margin-bottom:12px;">Solicita tu cotización</h1>
       <p class="muted" style="margin-bottom:32px; max-width:480px;">Cuéntanos sobre tu proyecto y qué tipo de inspección necesitas. Te contactamos a la brevedad.</p>
 
-      <form action="/gracias.html" method="get">
+      <form id="cotizacion" action="https://wa.me/528128912593" method="get">
         <div class="row">
           <div>
             <label for="nombre">Nombre</label>
@@ -63,13 +63,18 @@
         <label for="empresa">Empresa</label>
         <input id="empresa" class="field" name="empresa" autocomplete="organization">
 
-        <label for="servicio">Servicio de interés</label>
+        <label for="telefono">Teléfono / WhatsApp</label><input id="telefono" class="field" name="telefono" type="tel" autocomplete="tel" required>
+<label for="ubicacion">Ciudad y estado del servicio</label><input id="ubicacion" class="field" name="ubicacion" required>
+<label for="fecha">Fecha requerida (opcional)</label><input id="fecha" class="field" name="fecha" type="date">
+<label for="servicio">Servicio de interés</label>
         <input id="servicio" class="field" name="servicio" autocomplete="off" placeholder="Ej. Ultrasonido, Radiografía industrial…">
 
         <label for="mensaje">Mensaje</label>
         <textarea id="mensaje" class="field" name="mensaje" rows="5" required></textarea>
 
-        <button class="btn" type="submit">Enviar solicitud</button>
+        <p class="muted">Al continuar se abrirá WhatsApp con los datos de tu solicitud. Revisa el mensaje y pulsa Enviar para hacérnoslo llegar.</p>
+<button class="btn" type="submit">Preparar cotización en WhatsApp</button>
+<noscript><p>Para compartir todos los datos del formulario necesitas JavaScript. También puedes escribir directamente a <a href="mailto:ventas@grupoberlap.com">ventas@grupoberlap.com</a>.</p></noscript>
       </form>
     </div>
 
@@ -80,15 +85,15 @@
       </div>
       <div class="aside-item">
         <span class="data-label">Cobertura</span>
-        Nacional · disponibilidad 24/7
+        Proyectos en México · programación por confirmar
       </div>
       <div class="aside-item">
-        <span class="data-label">Certificación</span>
-        ISO 9001:2015 · NMX-EC-17025
+        <span class="data-label">Correo de ventas</span>
+        <a href="mailto:ventas@grupoberlap.com">ventas@grupoberlap.com</a>
       </div>
       <div class="aside-item">
         <span class="data-label">Tiempo de respuesta</span>
-        Contacto en menos de 24 horas hábiles
+        Consulta disponibilidad y programación por WhatsApp
       </div>
     </aside>
   </div>
@@ -99,7 +104,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <span class="logo-text">Grupo Berlap</span>
-        <p>Inspección y Ensayos No Destructivos para la industria metalmecánica, de construcción y energética en México. Procesos certificados bajo ISO 9001:2015.</p>
+        <p>Inspección y Ensayos No Destructivos para la industria metalmecánica, de construcción y energética en México.</p>
       </div>
       <div>
         <h4>Navegación</h4>
@@ -122,7 +127,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Grupo Berlap — Ensayos No Destructivos (END) en México.</p>
+      <p>© 2026 Grupo Berlap — Ensayos No Destructivos (END) en México.</p>
       <p><a href="/contacto.html" aria-current="page">Solicitar cotización</a> · <a href="https://wa.me/528128912593" target="_blank" rel="noopener">WhatsApp</a></p>
     </div>
   </div>
@@ -155,5 +160,6 @@
     });
   });
 </script>
+<script src="/assets/js/cotizacion.js" defer></script>
 </body>
 </html>

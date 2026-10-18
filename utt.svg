@@ -1,0 +1,9 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="100%" height="100%" fill="#07121c"/>
+  <rect x="40" y="60" width="720" height="260" rx="10" fill="#0ea5b7" opacity=".15"/>
+  <rect x="80" y="120" width="200" height="120" rx="8" fill="#0ea5b7"/>
+  <rect x="120" y="160" width="120" height="40" rx="6" fill="#041b22"/>
+  <rect x="320" y="150" width="380" height="10" fill="#22d3ee"/>
+  <text x="50%" y="380" fill="#bfefff" font-family="Arial" font-size="26" text-anchor="middle">Medición de Espesores (UTT)</text>
+</svg>

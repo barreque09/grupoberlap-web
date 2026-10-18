@@ -1,0 +1,12 @@
+GRUPO BERLAP — AJUSTES COMERCIALES
+No se ha publicado esta versión.
+
+Sube el contenido de esta carpeta a la raíz del repositorio existente, conservando assets y servicios. No subas el ZIP como un único archivo. El hosting debe servir la raíz.
+
+Cambios: portada orientada a cotización; servicios primero; preguntas frecuentes; información para cotizar en seis páginas; formulario que prepara mensaje en WhatsApp; eliminación de la falsa confirmación de envío; enlaces HTML explícitos; año y caché CSS actualizados.
+
+El formulario NO envía correo ni almacena solicitudes. Abre WhatsApp y el visitante debe pulsar Enviar. Conserva el correo de ventas como alternativa.
+
+Antes de publicar: confirmar WhatsApp 81 2891 2593 y ventas@grupoberlap.com. Se retiraron distintivos de certificación/experiencia de la portada pendientes de respaldo. Confirmar certificados, alcance y calificaciones para reincorporarlos. No se añadieron clientes, testimonios, fotos de proyectos ni resultados inventados. Las imágenes existentes se conservan; confirmar autorización de uso.
+
+Verificación: rutas locales y sintaxis JavaScript revisadas; flujo de construcción del mensaje probado sin envío. No se verificó apariencia en navegador ni entrega real en WhatsApp. Tras subir, comprobar móvil y realizar una solicitud de prueba.
