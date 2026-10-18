@@ -7,6 +7,6 @@ Cambios: portada orientada a cotización; servicios primero; preguntas frecuente
 
 El formulario NO envía correo ni almacena solicitudes. Abre WhatsApp y el visitante debe pulsar Enviar. Conserva el correo de ventas como alternativa.
 
-Antes de publicar: confirmar WhatsApp 81 2891 2593 y ventas@grupoberlap.com. Se retiraron distintivos de certificación/experiencia de la portada pendientes de respaldo. Confirmar certificados, alcance y calificaciones para reincorporarlos. No se añadieron clientes, testimonios, fotos de proyectos ni resultados inventados. Las imágenes existentes se conservan; confirmar autorización de uso.
+Antes de publicar: confirmar WhatsApp 833 818 2922 y ventas@grupoberlap.com. Se retiraron distintivos de certificación/experiencia de la portada pendientes de respaldo. Confirmar certificados, alcance y calificaciones para reincorporarlos. No se añadieron clientes, testimonios, fotos de proyectos ni resultados inventados. Las imágenes existentes se conservan; confirmar autorización de uso.
 
 Verificación: rutas locales y sintaxis JavaScript revisadas; flujo de construcción del mensaje probado sin envío. No se verificó apariencia en navegador ni entrega real en WhatsApp. Tras subir, comprobar móvil y realizar una solicitud de prueba.

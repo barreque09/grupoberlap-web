@@ -6,5 +6,5 @@ const form = document.getElementById('cotizacion');
 if (form) form.addEventListener('submit', event => {
   event.preventDefault();
   if (!form.reportValidity()) return;
-  window.location.assign('https://wa.me/528128912593?text=' + encodeURIComponent(buildQuote(new FormData(form))));
+  window.location.assign('https://wa.me/528338182922?text=' + encodeURIComponent(buildQuote(new FormData(form))));
 });
