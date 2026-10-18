@@ -343,3 +343,10 @@ textarea.field{resize:vertical; min-height:120px}
 
 .hero-landing__bg, .hero-gradient{pointer-events:none !important}
 .dropdown{z-index:5000 !important}
+
+/* Mejoras comerciales y accesibilidad */
+:focus-visible{outline:3px solid var(--teal-bright);outline-offset:5px}
+details{border-bottom:1px solid var(--line);padding:20px 0}summary{cursor:pointer;font-weight:600;font-size:1.1rem}details p{max-width:780px;margin-top:12px;color:var(--ink-soft)}
+.quote-help{margin:36px 0;padding:28px;border:1px solid var(--line);border-radius:8px;background:var(--bg-raised)}.quote-help p{margin:12px 0 20px}
+form .muted{margin:16px 0;font-size:.9rem}.contact-wrap>*,.grid-two>*{min-width:0}.contact-inline a,.contact-aside a{overflow-wrap:anywhere}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
