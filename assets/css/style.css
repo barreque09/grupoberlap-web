@@ -377,3 +377,32 @@ form .muted{margin:16px 0;font-size:.9rem}.contact-wrap>*,.grid-two>*{min-width:
     border-right: 0;
   }
 }
+
+
+/* BERLAP INSPECT — módulo visual lateral del encabezado */
+.hero-main-split{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:clamp(22px,3vw,55px);align-items:center}
+.hero-main-split .hero-landing__content{max-width:620px;padding:var(--sp-6) 0 var(--sp-4)}
+.hero-main-split h1{font-size:clamp(32px,4vw,49px)}
+.inspect-hero-feature{background:rgba(11,19,29,.83);border:1px solid rgba(79,214,196,.24);border-radius:16px;padding:17px;box-shadow:0 20px 55px rgba(0,0,0,.32);backdrop-filter:blur(5px);max-width:440px;justify-self:end;width:100%}
+.inspect-preview{background:#101c29;border:1px solid #284452;border-radius:10px;padding:14px;color:#eaf2f4;overflow:hidden;font-family:var(--f-body)}
+.inspect-preview-top{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:13px;border-bottom:1px solid #304452;padding-bottom:11px}
+.inspect-preview-logo{color:#4fd6c4;font-weight:700;letter-spacing:.03em}
+.inspect-preview-tag{color:#91a8b3;font-size:9px;letter-spacing:.04em}
+.inspect-preview-title{font-weight:600;font-size:14px;padding:13px 0}
+.inspect-preview-title span{display:block;color:#4fd6c4;font-size:10px;font-weight:400;margin-top:3px}
+.inspect-preview-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.inspect-preview-metrics>div{background:#1c3040;border-radius:7px;padding:8px}
+.inspect-preview-metrics small{display:block;color:#a1b7bf;font-size:10px}
+.inspect-preview-metrics strong{display:block;font-size:12px;margin-top:2px}
+.inspect-preview-list{margin-top:13px;display:grid;gap:7px}
+.inspect-preview-list>div{display:flex;gap:6px;align-items:center;justify-content:space-between;background:#182936;border-radius:6px;padding:9px;font-size:11px}
+.inspect-preview-list small{color:#a7bdc8}
+.inspect-preview-list em{font-size:10px;font-style:normal;white-space:nowrap}
+.inspect-state-ready{color:#64dec5}.inspect-state-review{color:#f4bd7a}.inspect-state-pending{color:#c5d4dc}
+.inspect-preview-foot{margin-top:12px;padding-top:11px;border-top:1px solid #304452;color:#9ed7d8;text-align:center;font-size:10px;letter-spacing:.02em}
+.inspect-feature-caption{padding:15px 5px 3px}
+.inspect-feature-caption h2{margin:6px 0;font-size:24px;color:#fff}
+.hero-impact.refined .inspect-feature-caption p{font-size:13px;line-height:1.5;margin-bottom:14px;color:#bcd0d8}
+.inspect-feature-caption .btn{width:100%;text-align:center;font-size:13px}
+@media(max-width:900px){.hero-main-split{grid-template-columns:1fr;gap:0}.inspect-hero-feature{max-width:540px;justify-self:start;margin-bottom:32px}.hero-main-split .hero-landing__content{padding:52px 0 25px}.hero-impact.refined{min-height:auto}}
+@media(max-width:560px){.inspect-hero-feature{padding:11px}.inspect-preview{padding:10px}.inspect-preview-list small{display:none}.inspect-preview-metrics strong{font-size:11px}.inspect-preview-tag{font-size:8px}}
