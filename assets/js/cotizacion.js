@@ -3,6 +3,13 @@ function buildQuote(data) {
   return 'Hola, quisiera cotizar una inspección con Grupo Berlap.\n\n' + fields.map(([key,label]) => label + ': ' + (String(data.get(key) || '').trim() || 'Por definir')).join('\n');
 }
 const form = document.getElementById('cotizacion');
+if (form) {
+  const selected = new URLSearchParams(window.location.search).get('servicio');
+  const serviceInput = form.querySelector('[name="servicio"]');
+  if (selected && serviceInput && !serviceInput.value) {
+    serviceInput.value = selected.slice(0, 120);
+  }
+}
 if (form) form.addEventListener('submit', event => {
   event.preventDefault();
   if (!form.reportValidity()) return;
