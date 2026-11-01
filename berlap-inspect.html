@@ -84,7 +84,7 @@
 <article class="card"><img src="/assets/berlap-reporte-ejemplo-pagina-1.png" alt="Ejemplo anonimizado de reporte técnico de inspección de rodillo: ensayos, resultados y conclusión" style="width:100%;aspect-ratio:3/4;object-fit:contain;background:white;border-radius:8px;display:none" loading="lazy" onload="this.style.display='block'" onerror="this.remove()"><h3 style="margin-top:14px">Reporte técnico</h3><p>Identificación del trabajo, métodos aplicados, evaluación y observaciones documentadas.</p></article>
 <article class="card"><img src="/assets/berlap-reporte-ejemplo-pagina-2.png" alt="Anexo fotográfico anonimizado de inspección de rodillo" style="width:100%;aspect-ratio:3/4;object-fit:contain;background:white;border-radius:8px;display:none" loading="lazy" onload="this.style.display='block'" onerror="this.remove()"><h3 style="margin-top:14px">Evidencia fotográfica</h3><p>Imágenes relacionadas con el componente inspeccionado y sus zonas de evaluación.</p></article>
 </div>
-<p><a class="btn" href="/assets/BERLAP-reporte-ejemplo-anonimizado.pdf" download>Descargar reporte de ejemplo (PDF)</a></p>
+<p><a class="btn" id="sample-report-download" href="/assets/BERLAP-reporte-ejemplo-anonimizado.pdf" download style="display:none">Descargar reporte de ejemplo (PDF)</a></p>
 <p class="muted" style="font-size:13px;margin-top:12px">Muestra anonimizada con fines informativos. Los entregables de cada servicio dependen de su alcance y requisitos acordados.</p>
 <h2 style="margin-top:42px">Más evidencia de trabajo en taller</h2>
 <div class="grid-cards cards" style="margin:22px 0;gap:18px">
@@ -159,5 +159,6 @@
   });
 </script>
 <script src="/assets/js/contact-events.js" defer></script>
+<script>fetch('/assets/BERLAP-reporte-ejemplo-anonimizado.pdf',{method:'HEAD'}).then(r=>{if(r.ok && (r.headers.get('content-type')||'').includes('pdf')){var a=document.getElementById('sample-report-download');if(a)a.style.display='inline-flex';}}).catch(()=>{});</script>
 </body>
 </html>
