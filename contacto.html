@@ -18,6 +18,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png">
   <meta name="theme-color" content="#0a0f16">
   <link rel="stylesheet" href="/assets/css/style.css?v=6">
+<style>.quote-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}@media(max-width:640px){#cotizacion .row{display:grid;grid-template-columns:1fr;gap:12px}#cotizacion .field{width:100%;max-width:100%}}</style>
 </head>
 <body>
 
@@ -57,26 +58,26 @@
       <h1 style="font-family:var(--f-display); font-size:clamp(28px,3.6vw,40px); margin-bottom:12px;">Solicita tu cotización</h1>
       <p class="muted" style="margin-bottom:20px; max-width:480px;">Indícanos qué equipo necesitas inspeccionar y dónde se encuentra. Te ayudamos a preparar una propuesta.</p><p style="margin-bottom:26px;"><a class="btn" href="https://wa.me/528338182922?text=Hola%2C%20me%20interesa%20cotizar%20una%20inspecci%C3%B3n%20industrial.%20Mi%20empresa%20es%3A%20" target="_blank" rel="noopener">Cotizar rápido por WhatsApp</a></p><h2 style="font-size:20px;margin-bottom:12px;">O envía una solicitud con los detalles</h2>
 
-      <form id="cotizacion" action="https://wa.me/528338182922" method="get">
+      <form id="cotizacion" method="post" enctype="multipart/form-data">
         <div class="row">
           <div>
             <label for="nombre">Nombre</label>
-            <input id="nombre" class="field" name="nombre" autocomplete="name" required>
+            <input id="nombre" class="field" name="nombre" autocomplete="name" maxlength="120" required>
           </div>
           <div>
-            <label for="correo">Correo (opcional)</label>
-            <input id="correo" class="field" type="email" name="correo" autocomplete="email">
+            <label for="correo">Correo electrónico *</label>
+            <input id="correo" class="field" type="email" name="correo" autocomplete="email" maxlength="254" required>
           </div>
         </div>
 
         <label for="empresa">Empresa</label>
-        <input id="empresa" class="field" name="empresa" autocomplete="organization">
+        <input id="empresa" class="field" name="empresa" autocomplete="organization" maxlength="140">
 
-        <label for="telefono">Teléfono / WhatsApp</label><input id="telefono" class="field" name="telefono" type="tel" autocomplete="tel" required>
-<label for="ubicacion">Ciudad y estado del servicio</label><input id="ubicacion" class="field" name="ubicacion" required>
+        <label for="telefono">Teléfono / WhatsApp</label><input id="telefono" class="field" name="telefono" type="tel" autocomplete="tel" maxlength="35" required>
+<label for="ubicacion">Ciudad y estado del servicio</label><input id="ubicacion" class="field" name="ubicacion" maxlength="180" required>
 <label for="fecha">Fecha requerida (opcional)</label><input id="fecha" class="field" name="fecha" type="date">
 <label for="servicio">Servicio de interés</label>
-        <input id="servicio" class="field" name="servicio" list="lista-servicios" autocomplete="off" placeholder="Selecciona o escribe el servicio">
+        <input id="servicio" class="field" name="servicio" maxlength="150" list="lista-servicios" autocomplete="off" placeholder="Selecciona o escribe el servicio">
         <datalist id="lista-servicios">
           <option value="Ultrasonido industrial (UT)"></option>
           <option value="Medición de espesores por ultrasonido"></option>
@@ -89,11 +90,17 @@
         </datalist>
 
         <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" class="field" name="mensaje" rows="5" required></textarea>
+        <textarea id="mensaje" class="field" name="mensaje" rows="5" maxlength="5000" required></textarea>
 
-        <p class="muted">Al continuar se abrirá WhatsApp con los datos de tu solicitud. Revisa el mensaje y pulsa Enviar para hacérnoslo llegar.</p>
-<button class="btn" type="submit">Continuar a WhatsApp con mi solicitud</button>
-<noscript><p>Para compartir todos los datos del formulario necesitas JavaScript. También puedes escribir directamente a <a href="mailto:ventas@grupoberlap.com">ventas@grupoberlap.com</a>.</p></noscript>
+        <label for="adjuntos">Adjuntar requisiciones, planos o fotografías (opcional)</label>
+        <input id="adjuntos" class="field" name="adjuntos" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.webp,application/pdf,image/jpeg,image/png,image/webp" aria-describedby="ayuda-adjuntos">
+        <p class="muted" id="ayuda-adjuntos">Hasta 3 archivos PDF o imagen, máximo 1 MB cada uno (3 MB en total).</p>
+        <div class="quote-honeypot" aria-hidden="true"><label for="website">Sitio web</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+        <input type="hidden" name="startedAt" id="startedAt">
+        <p class="muted">Enviaremos los datos a nuestro equipo de ventas y recibirás una confirmación en tu correo. Si prefieres atención inmediata, utiliza el botón de WhatsApp de arriba.</p>
+        <button class="btn" id="submit-cotizacion" type="submit">Enviar solicitud por correo</button>
+        <p id="cotizacion-estado" role="status" aria-live="polite" style="margin-top:12px"></p>
+<noscript><p>Para enviar la solicitud automáticamente necesitas JavaScript. También puedes escribir a <a href="mailto:ventas@grupoberlap.com">ventas@grupoberlap.com</a>.</p></noscript>
       </form>
     </div>
 
