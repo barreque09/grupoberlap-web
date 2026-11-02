@@ -39,7 +39,7 @@ if (form) {
       if (!response.ok) throw Error(result.error || 'No se pudo enviar la solicitud.');
       form.reset();
       form.querySelector('#startedAt').value = String(Date.now());
-      status.textContent = '¡Solicitud recibida! Tu folio es ' + result.folio + '. Te enviamos una confirmación al correo.';
+      status.textContent = '¡Solicitud recibida! Tu folio es ' + result.folio + (result.confirmationSent ? '. Te enviamos una confirmación al correo.' : '. Nuestro equipo recibió la solicitud; la confirmación por correo no pudo enviarse.');
     } catch (error) {
       status.textContent = error.message || 'Error al enviar. Intenta nuevamente.';
     } finally {
