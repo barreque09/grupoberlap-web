@@ -1,4 +1,4 @@
-// Vercel Node.js Serverless Function. Configurar RESEND_API_KEY, QUOTE_FROM_EMAIL,
+// Server-side quote handler used by Netlify Functions. Configure RESEND_API_KEY, QUOTE_FROM_EMAIL,
 // UPSTASH_REDIS_REST_URL y UPSTASH_REDIS_REST_TOKEN en Environment Variables.
 const DESTINATION = 'ventas@grupoberlap.com';
 const TYPES = new Set(['application/pdf','image/jpeg','image/png','image/webp']);
