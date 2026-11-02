@@ -4,7 +4,7 @@ Este cambio se encuentra preparado en una rama de revisión. No estará operativ
 
 ## Variables en Netlify
 - `RESEND_API_KEY`: API key de Resend (crearla desde la cuenta autorizada).
-- `QUOTE_FROM_EMAIL`: remitente de un dominio validado en Resend, por ejemplo `Cotizaciones Grupo Berlap <cotizaciones@grupoberlap.com>`.
+- `QUOTE_FROM_EMAIL`: remitente de un dominio validado en Resend, configurar la dirección autorizada como valor de la variable en Netlify (no publicar aquí ese valor).
 - `UPSTASH_REDIS_REST_URL` y `UPSTASH_REDIS_REST_TOKEN`: base Redis REST de Upstash para el folio consecutivo y el límite de envío.
 
 El dominio `grupoberlap.com` debe estar verificado en Resend mediante DNS para poder enviar a cualquier cliente.
