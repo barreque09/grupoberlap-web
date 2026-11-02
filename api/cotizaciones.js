@@ -70,15 +70,15 @@ module.exports = async (req,res) => {
     const table=rows.map(([a,v])=>'<tr><th style="text-align:left;padding:8px;border-bottom:1px solid #ddd">'+escapeHtml(a)+'</th><td style="padding:8px;border-bottom:1px solid #ddd;white-space:pre-wrap">'+escapeHtml(v||'No indicado')+'</td></tr>').join('');
     const from=process.env.QUOTE_FROM_EMAIL;
     await sendMail({
-      from, to:[DESTINATION], reply_to:email,
-      subject:'Nueva solicitud de cotización '+folio+' - '+company.slice(0,60),
+      from: 'Grupo Berlap - Cotizaciones <'+from+'>', to:[DESTINATION],
+      subject:'BERLAP | Solicitud web '+folio,
       html:'<h2>Solicitud de cotización · Grupo Berlap</h2><table>'+table+'</table>',
       attachments
     });
     // El envío al cliente se intenta separadamente: no bloquear solicitudes recibidas por fallos de confirmación.
     let confirmationSent=true;
     try{
-      await sendMail({from,to:[email],subject:'Recibimos tu solicitud '+folio+' | Grupo Berlap',
+      await sendMail({from:'Grupo Berlap <'+from+'>',to:[email],subject:'Confirmación de solicitud '+folio+' | Grupo Berlap',
         html:'<h2>Gracias por contactar a Grupo Berlap</h2><p>Hemos recibido tu solicitud de cotización con folio <strong>'+escapeHtml(folio)+'</strong>.</p><p>Nuestro equipo revisará los detalles y responderá a este correo.</p><p>Grupo Berlap · ventas@grupoberlap.com</p>'});
     }catch(e){confirmationSent=false;console.error('Error enviando confirmación',folio);}
     return res.status(200).json({folio,confirmationSent});
