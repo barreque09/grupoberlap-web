@@ -32,7 +32,7 @@ if (form) {
       const payload = Object.fromEntries(new FormData(form).entries());
       delete payload.adjuntos;
       payload.attachments = attachments;
-      const response = await fetch('/api/cotizaciones', {
+      const response = await fetch('/.netlify/functions/cotizaciones', {
         method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload)
       });
       const result = await response.json();
