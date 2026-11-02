@@ -2,7 +2,7 @@
 
 Este cambio se encuentra preparado en una rama de revisión. No estará operativo en producción hasta configurar los servicios e integrar la rama.
 
-## Variables en Vercel
+## Variables en Netlify
 - `RESEND_API_KEY`: API key de Resend (crearla desde la cuenta autorizada).
 - `QUOTE_FROM_EMAIL`: remitente de un dominio validado en Resend, por ejemplo `Cotizaciones Grupo Berlap <cotizaciones@grupoberlap.com>`.
 - `UPSTASH_REDIS_REST_URL` y `UPSTASH_REDIS_REST_TOKEN`: base Redis REST de Upstash para el folio consecutivo y el límite de envío.
@@ -11,7 +11,7 @@ El dominio `grupoberlap.com` debe estar verificado en Resend mediante DNS para p
 El correo receptor está definido en el servidor como `ventas@grupoberlap.com`.
 
 ## Prueba de aceptación
-1. Configura las variables en el proyecto de Vercel y despliega la rama de pruebas.
+1. En Netlify abre Variables ambientales y agrega las cuatro variables con scope Functions (incluye Deploy Previews para pruebas). Luego abre el Deploy Preview del PR #2.
 2. Llena el formulario con una cuenta real, PDF pequeño y fotografía.
 3. Comprueba llegada a ventas, adjuntos, folio y correo de confirmación.
 4. Comprueba que el botón de WhatsApp sigue independiente.
