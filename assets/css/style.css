@@ -443,13 +443,12 @@ form .muted{margin:16px 0;font-size:.9rem}.contact-wrap>*,.grid-two>*{min-width:
 @media(max-width:850px){.inspect-intro{grid-template-columns:1fr;gap:22px}.inspect-screen{max-width:690px}.inspect-benefits{grid-template-columns:1fr;gap:23px}.inspect-report-row{grid-template-columns:1fr}.inspect-report-row>img{max-width:280px}.inspect-final-cta{align-items:flex-start;flex-direction:column}}
 @media(max-width:560px){.inspect-screenshot-grid{grid-template-columns:1fr}.inspect-simple-section{padding:32px 0}.inspect-intro{padding:12px 0 30px}.inspect-report-row{padding:14px}.inspect-final-cta .btn{width:100%;text-align:center}}
 
-/* Demostraciones de interfaz con datos ficticios: sin capturas de clientes */
-.berlap-demo{display:grid;grid-template-columns:128px 1fr;background:#f0f5fa;color:#13253d;min-height:345px;font-family:Arial,sans-serif;font-size:12px}
-.berlap-demo-side{background:#071c32;color:#a9c9e4;padding:15px 8px}.berlap-demo-side strong{display:block;color:white;font-size:12px;margin:5px 6px 30px}.berlap-demo-side small{color:#49a5ec;font-size:9px}.berlap-demo-side div{padding:11px 7px;font-size:10px}.berlap-demo-side .active{background:#0e4c80;border-radius:6px;color:white}
-.berlap-demo-main{padding:19px;min-width:0}.berlap-demo-main>small,.berlap-demo-form>small{font-size:9px;color:#6b7e92}.berlap-demo-main h3{font-size:19px;color:#0b2945;margin:12px 0 4px}.berlap-demo-main p{font-size:11px;color:#718394;margin:0 0 13px}
-.berlap-demo-banner{border-radius:9px;padding:21px;background:linear-gradient(120deg,#00335e,#1378b4);color:white}.berlap-demo-banner strong{font-size:15px}.berlap-demo-banner small{display:block;color:#d0e9f4;font-size:10px;margin-top:7px}
-.berlap-demo-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:13px 0}.berlap-demo-stats span{background:white;border-radius:6px;padding:11px}.berlap-demo-stats b{display:block;font-size:18px;color:#0a3559}.berlap-demo-stats small{font-size:9px;color:#678}
-.berlap-demo-table{background:white;padding:11px;border-radius:6px}.berlap-demo-table strong{color:#123557}.berlap-demo-table div{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-bottom:1px solid #e7edf2;color:#39536a;font-size:10px}.berlap-demo-table em,.berlap-demo-history em{font-style:normal;color:#08739d}
-.berlap-demo-card{border-radius:12px;overflow:hidden;background:#f3f7fa;color:#183854;border:1px solid #dce5eb}.berlap-demo-form{padding:23px;min-height:260px;font-family:Arial,sans-serif}.berlap-demo-form h3{color:#153a60;font-size:20px;margin:15px 0 25px}.berlap-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.berlap-form-grid label{font-size:11px;font-weight:bold;color:#54718a}.berlap-form-grid input{display:block;width:100%;margin-top:6px;background:white;border:1px solid #d1dce5;border-radius:5px;padding:10px 7px;color:#31536d;font-size:11px}.berlap-demo-save{display:inline-block;background:#0877b4;color:white;font-size:11px;margin-top:25px;border-radius:5px;padding:10px 15px}
-.berlap-demo-history{background:white;border-radius:8px;padding:10px}.berlap-demo-history div{display:grid;grid-template-columns:70px 1fr 85px;gap:8px;padding:13px 6px;border-bottom:1px solid #e6edf2;font-size:11px}.berlap-demo-history span{color:#597085}.berlap-demo-card figcaption{color:#38536e;font-size:12px;padding:12px 17px}
-@media(max-width:580px){.berlap-demo{grid-template-columns:85px 1fr;font-size:10px}.berlap-demo-side{padding:9px 4px}.berlap-demo-side div{font-size:8px;padding:9px 3px}.berlap-demo-side strong{font-size:9px;margin:5px 2px 15px}.berlap-demo-main{padding:12px}.berlap-demo-main h3{font-size:15px}.berlap-demo-stats span{padding:6px}.berlap-demo-table div{font-size:8px}.berlap-form-grid{grid-template-columns:1fr}.berlap-demo-history div{grid-template-columns:50px 1fr 65px;font-size:9px}}
+
+/* Presentación con captura auténtica de BERLAP INSPECT */
+.inspect-real-panel{background:#eef3f8;border-color:rgba(255,255,255,.22)}
+.inspect-real-panel img{display:block;width:100%;height:auto;object-fit:contain}
+.inspect-real-panel figcaption{background:#0e1d2a;color:#c3d3d8}
+.inspect-report-row{grid-template-columns:minmax(0,380px) minmax(0,1fr);align-items:start}
+.inspect-report-row iframe{min-height:430px}
+.inspect-report-row .btn{display:inline-block}
+@media(max-width:850px){.inspect-report-row{grid-template-columns:1fr}.inspect-report-row iframe{max-width:460px;width:100%;min-height:380px}}
