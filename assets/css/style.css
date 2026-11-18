@@ -118,6 +118,7 @@ p{color:var(--ink-soft)}
 
 .dropdown{
   position:absolute; top:calc(100% - 1px); left:0; min-width:300px;
+  list-style:none; margin:0;
   padding:6px; background:var(--bg-panel); border:1px solid var(--line);
   border-radius:var(--radius); box-shadow:0 20px 40px rgba(0,0,0,.45);
   display:none; z-index:4000;
