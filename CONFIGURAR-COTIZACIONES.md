@@ -7,7 +7,7 @@ Este cambio convierte el formulario de `contacto.html` en un formulario HTML de 
 1. **Confirmar alojamiento**: este mecanismo solo recibe solicitudes si `www.grupoberlap.com` se publica mediante **Netlify**. No funciona automáticamente en GitHub Pages ni Vercel.
 2. En el proyecto correspondiente de Netlify, abrir **Forms** y comprobar que la **detección de formularios** esté activada. Si se acaba de activar, publicar un nuevo deploy.
 3. Integrar este cambio y desplegarlo en Netlify. Comprobar que en **Forms** se detecta un formulario llamado `cotizacion`.
-4. Abrir **Forms → Submission notifications → Add notification → Email notification** y configurar el destinatario **ventas@grupoberlap.com** para `cotizacion`. Guardar la notificación. La dirección debe ser un buzón activo.
+4. Abrir **Forms → Submission notifications → Add notification → Email notification** y configurar el destinatario **ventas@grupoberlap.com** para `cotizacion`. Guardar la notificación. La dirección debe ser un buzón activo. **Desde noviembre de 2026, si el destinatario no forma parte del equipo de Netlify, debe confirmar su dirección mediante el email de verificación que Netlify le enviará**. Sin esa confirmación, las notificaciones no llegan.
 5. Abrir `https://www.grupoberlap.com/contacto.html`, hacer una solicitud de prueba y verificar **ambas cosas**: que aparezca en la lista de envíos de Netlify y que llegue la notificación a `ventas@grupoberlap.com` (revisar también spam).
 6. Confirmar el funcionamiento en móvil. Probar también el enlace de WhatsApp por separado.
 
