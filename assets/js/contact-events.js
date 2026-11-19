@@ -26,6 +26,6 @@
   const form = document.getElementById('cotizacion');
   if (form) form.addEventListener('submit', function () {
     if (!form.checkValidity()) return;
-    track('quote_form_submit', 'whatsapp');
+    track('quote_form_attempt', 'email');
   });
 })();
